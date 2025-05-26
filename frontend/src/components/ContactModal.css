@@ -1,0 +1,98 @@
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1050;
+  pointer-events: none;
+}
+
+.contact-modal-content {
+  background-color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  width: 85%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  pointer-events: auto;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.contact-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-modal-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #673ab7;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #888;
+  padding: 0.2rem;
+}
+
+.close-button:hover {
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #673ab7;
+  box-shadow: 0 0 5px rgba(103, 58, 183, 0.5);
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.8rem;
+}
+
+.submit-button:hover {
+  background-color: #5e35b1;
+} 

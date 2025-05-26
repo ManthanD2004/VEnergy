@@ -1,0 +1,126 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items again, as we're controlling height differently */
+  z-index: 1050; /* Increased z-index to be on top of the navbar */
+  /* Removed overflow-y: auto; */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 1.5rem 2rem; /* Adjusted padding */
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px; /* Increased max width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 20px; /* Add some bottom margin */
+  max-height: calc(100vh - 40px); /* Adjust max height calculation */
+  overflow-y: hidden; /* Prevent scrolling within the modal content */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* Decreased margin bottom */
+  padding-bottom: 1rem; /* Add padding at the bottom */
+  border-bottom: 1px solid #eee; /* Add a light border */
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.3rem; /* Slightly smaller font size */
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #888;
+  padding: 0.5rem; /* Add some padding */
+}
+
+.close-button:hover {
+  color: #555;
+}
+
+.modal-form-columns {
+  display: flex;
+  gap: 2rem; /* Space between columns */
+}
+
+.left-column,
+.right-column {
+  flex: 1; /* Distribute space equally */
+}
+
+.city-state-container {
+  display: flex;
+  gap: 1rem; /* Space between city and state inputs */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.city-state-container .form-group {
+    flex: 1; /* Allow form groups to take equal space */
+    margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 0.8rem; /* Decreased margin bottom */
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem; /* Increased margin bottom */
+  font-weight: 500;
+  color: #555;
+  font-size: 0.95rem; /* Slightly smaller font size */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #a5d6a7; /* Light green border */
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  outline: none; /* Remove default outline */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50; /* Darker green border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Optional: subtle shadow on focus */
+}
+
+.submit-button {
+  display: block;
+  width: 100%; /* Button spans across both columns */
+  padding: 0.9rem;
+  background-color: #8bc34a; /* Green color from image */
+  color: white;
+  border: none;
+  border-radius: 30px; /* More rounded corners */
+  font-size: 1.1rem; /* Slightly smaller font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem; /* Increased top margin */
+}
+
+.submit-button:hover {
+  background-color: #7cb342; /* Darker green on hover */
+} 

@@ -1,0 +1,124 @@
+.footer-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-consultation {
+  background-color: #4CAF50; /* Green color from the image */
+  color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.consultation-content {
+  display: flex;
+  align-items: center;
+}
+
+.consultation-arrow {
+  margin-right: 0.5rem;
+}
+
+.footer-logo-section,
+.footer-links-section,
+.footer-contact-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 2rem;
+}
+
+.footer-logo-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -4rem;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.footer-links-section {
+  text-align: left;
+  margin-left: 4rem;
+}
+
+.footer-links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links-section a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links-section a:hover {
+  opacity: 1;
+}
+
+.footer-contact-section .get-a-quote {
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-contact-section .get-a-quote:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  opacity: 0.8;
+}
+
+.contact-info span {
+  margin-right: 0.5rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+} 

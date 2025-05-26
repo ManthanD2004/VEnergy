@@ -1,0 +1,21 @@
+.book-consultation-button {
+  position: fixed;
+  left: 0;
+  top: 60%;
+  transform: translateY(-50%) rotate(-90deg); /* Center vertically and rotate */
+  transform-origin: 0 0; /* Set origin for rotation */
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1040; /* Below the modal, above other content */
+  white-space: nowrap; /* Prevent text wrapping */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.book-consultation-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+} 

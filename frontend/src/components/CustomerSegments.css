@@ -1,0 +1,82 @@
+.customer-segments-section {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(to bottom, black, #272b2f); /* black to light blue */
+    color: white;
+    position: relative; /* Needed for positioning the pseudo-element */
+    overflow: hidden; /* Hide any potential overflow from the blur */
+  }
+
+  .customer-segments-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px; /* Adjust height for the fade area */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); /* Fade from transparent to black */
+    backdrop-filter: blur(10px); /* Keep the blur effect */
+    z-index: 1; /* Ensure the pseudo-element is above the background but below content */
+  }
+
+  .customer-segments-section > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the blur layer */
+  }
+
+.customer-segments-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.segments-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between the image segments */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.segment-item {
+  position: relative;
+  width: 45%; /* Adjust width as needed */
+  max-width: 500px; /* Max width for larger screens */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.segment-item:hover {
+  transform: scale(1.02); /* Scale up in all directions */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.segment-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Add specific styling for commercial image */
+.segment-item:nth-child(2) img {
+  transform: scale(1.2); /* Zoom in by 20% */
+  transform-origin: center center;
+}
+
+.segment-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.segment-overlay h3 {
+  margin: 0;
+  font-size: 1.5rem;
+} 

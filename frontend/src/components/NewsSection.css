@@ -1,0 +1,96 @@
+.news-section {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); /* Gradient merging with sections above and below */
+  color: #eee; /* Light text color for readability */
+}
+
+.news-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #eee; /* Light color for heading */
+}
+
+.news-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between cards */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  max-width: 1200px; /* Adjust max width as needed */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.news-card {
+  background-color: #ffffff; /* Keep cards white for contrast */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  flex: 1;
+  min-width: 280px; /* Minimum width for cards */
+  max-width: 350px; /* Maximum width for cards */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative; /* Add relative positioning */
+  padding-bottom: 3rem; /* Add padding to make space for the absolutely positioned link */
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for images, adjust as needed */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.news-card-content {
+  padding: 1.5rem;
+  /* Removed position: relative */
+  /* Removed padding-bottom */
+}
+
+.news-card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333; /* Dark text for heading */
+}
+
+.news-card-content .read-more {
+  position: absolute; /* Position the link absolutely */
+  bottom: 1.5rem; /* Position from the bottom of the card */
+  right: 1.5rem; /* Position from the right of the card */
+  color: #000; /* Changed color to black */
+  text-decoration: underline; /* Added underline */
+  font-weight: bold;
+  transition: color 0.3s ease;
+  /* Removed display and margin-top as absolute positioning handles placement */
+}
+
+.news-card-content .read-more:hover {
+  color: #333; /* Slightly lighter black on hover */
+}
+
+.news-read-more-button {
+  display: inline-block; /* Change to inline-block */
+  margin: 3rem 1rem 0 auto; /* Add top margin, 1rem right margin, auto left margin to push right */
+  padding: 1rem 2.5rem;
+  background-color: #ffffff; /* White background */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-read-more-button:hover {
+  background-color: #e0e0e0; /* Lighter gray on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-read-more-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 

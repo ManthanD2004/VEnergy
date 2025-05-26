@@ -1,0 +1,107 @@
+.new-section {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(to bottom, #272b2f, #222); /* Gradient merging with the section above */
+  color: #eee; /* Light text color for readability */
+}
+
+.new-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem; /* Increased margin */
+  color: #eee; /* Light text color for heading */
+}
+
+.new-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc; /* Slightly lighter text color for paragraphs */
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px; /* Add some margin below the cards */
+  max-width: 1200px; /* Increased max width to accommodate four cards */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.step-card {
+  background-color: #ffffff; /* Keep cards white for contrast */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 22%; /* Adjusted width for four cards with gap */
+}
+
+.icon-placeholder {
+  width: 60px; /* Size of icon area */
+  height: 60px; /* Size of icon area */
+  background-color: #4caf50; /* Example icon background color */
+  margin-bottom: 1.5rem; /* Space below icon */
+  /* Add styles for actual icons when available */
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333; /* Dark text for card headings */
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555; /* Slightly lighter text color for card paragraphs */
+  margin-bottom: 1.5rem; /* Space below paragraph */
+}
+
+.step-button {
+  display: inline-block;
+  background-color: #000000; /* Black button background */
+  color: white; /* White text */
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px; /* Slightly rounded button corners */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.step-button:hover {
+  background-color: #333333; /* Darker background on hover */
+}
+
+.book-now-button {
+  background-color: #5e7e87;
+  color: #000;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 60px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 9px;
+}
+
+.book-now-button:hover {
+  background-color: #066a8f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-now-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
