@@ -67,10 +67,7 @@ const Residential: React.FC = () => {
             <h3>Government Subsidies</h3>
             <p>Avail up to 40% subsidy on your solar installation through government schemes.</p>
           </div>
-          <div className="benefit-card">
-            <h3>Easy Financing</h3>
-            <p>Flexible financing options with 0% EMI available for qualified customers.</p>
-          </div>
+          
           <div className="benefit-card">
             <h3>25-Year Warranty</h3>
             <p>Long-term performance guarantee with our premium solar solutions.</p>
