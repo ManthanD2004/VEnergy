@@ -1,0 +1,25 @@
+/* Styling for the About Content component */
+
+.about-content {
+  max-width: 1500px; /* Limit the width of the content */
+  margin: 3rem 1rem; /* Center the content block and add vertical space */
+  color: white; /* Set text color */
+  line-height: 1.6; /* Improve readability */
+  text-align: center; /* Center the text */
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem; /* Space below paragraphs */
+  width: 80vw;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-top: 2rem; /* Space above subheadings */
+  margin-bottom: 1rem; /* Space below subheadings */
+} 

@@ -1,24 +1,30 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import WhyChooseUs from './components/WhyChooseUs';
 import CustomerSegments from './components/CustomerSegments';
 import NewSection from './components/NewSection';
 import ImpactSection from './components/ImpactSection';
-import NewsSection from './components/NewsSection';
+import Blog from './components/Blog';
 import FAQSection from './components/FAQSection';
 import NewFooter from './components/NewFooter';
 import QuoteModal from './components/QuoteModal';
 import BookConsultationButton from './components/BookConsultationButton';
-import TestimonialsSection from './components/TestimonialsSection';
+import Testimonials from './components/Testimonials';
 import ContactModal from './components/ContactModal';
 import Residential from './pages/Residential';
 import Commercial from './pages/Commercial';
+import About from './pages/About';
 
 const Layout: React.FC = () => {
   const navbarRef = useRef<HTMLElement>(null);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -122,17 +128,18 @@ const Home: React.FC = () => {
         <main className="container">
           <h1>Welcome to Minsun Solar</h1>
           <p className="subtitle">Your trusted partner in solar energy solutions.</p>
+          <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>
           <div className="description">
             <p>Minsun Solar is a leading rooftop solar company, empowering homes and businesses across India with clean, reliable energy. MNRE-empanelled and customer-focused, we offer smart solar solutions, easy 0% EMI options, and dedicated support—making solar simple, affordable, and accessible for everyone.</p>
           </div>
-          <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>
         </main>
       </div>
       <WhyChooseUs />
       <CustomerSegments />
       <NewSection onOpenModal={handleOpenModal} />
       <ImpactSection />
-      <TestimonialsSection />
+      <Testimonials />
+      <Blog />
       <FAQSection />
       <NewFooter onOpenModal={handleOpenModal} />
       <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
@@ -156,6 +163,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/residential" element={<Residential />} />
         <Route path="/commercial" element={<Commercial />} />
+        <Route path="/about" element={<About />} />
       </Route>
     </Routes>
   );

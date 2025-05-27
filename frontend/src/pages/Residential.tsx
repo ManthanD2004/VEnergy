@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Residential.css';
 import FAQSection from '../components/FAQSection';
-import TestimonialsSection from '../components/TestimonialsSection';
 import NewFooter from '../components/NewFooter';
+import Testimonials from '../components/Testimonials';
 import QuoteModal from '../components/QuoteModal';
+import ContactModal from '../components/ContactModal';
+import BookConsultationButton from '../components/BookConsultationButton';
+
+
 
 const Residential: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const bookConsultationButtonRef = useRef<HTMLButtonElement>(null);
+  const [contactButtonPosition, setContactButtonPosition] = useState({
+    top: 0,
+    left: 0,
+    width: 0,
+    height: 0,
+  });
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -16,16 +28,31 @@ const Residential: React.FC = () => {
     setIsModalOpen(false);
   };
 
+  const handleOpenContactModal = () => {
+    if (bookConsultationButtonRef.current) {
+      const rect = bookConsultationButtonRef.current.getBoundingClientRect();
+      setContactButtonPosition({
+        top: rect.top,
+        left: rect.left,
+        width: rect.width,
+        height: rect.height,
+      });
+    }
+    setIsContactModalOpen(true);
+  };
+
+  const handleCloseContactModal = () => {
+    setIsContactModalOpen(false);
+  };
+
   return (
     <div className="App">
-      <div className="content-wrapper">
-        <div className="hero-section">
-          <h1>Residential Solar Solutions</h1>
-          <p className="subtitle">Power your home with clean, renewable energy</p>
-          <div className="description">
-            <p>Transform your home with sustainable solar energy. Our residential solutions are designed to maximize savings while reducing your carbon footprint.</p>
-          </div>
+      <div className='content-wrapper'>
+        <div className='headingofit'>
+          <h1 className='head'>Residential Solar Solutions</h1>
+          <p className="subtitle">Power your houses with sustainable energy</p>
           <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>
+          <p className='para'>Transform your houses with our solar solutions.<br/>Reduce operational costs and live your life with sustainability.</p>
         </div>
       </div>
       
@@ -53,7 +80,7 @@ const Residential: React.FC = () => {
 
       <section className="process-section">
         <h2>How It Works</h2>
-        <div className="process-steps">
+        <div className="residential-process-steps">
           <div className="step">
             <div className="step-number">1</div>
             <h3>Free Consultation</h3>
@@ -78,7 +105,7 @@ const Residential: React.FC = () => {
       </section>
 
       <section className="testimonials-section">
-        <TestimonialsSection />
+        <Testimonials />
       </section>
 
       <section className="faq-section">
@@ -87,6 +114,17 @@ const Residential: React.FC = () => {
 
       <NewFooter onOpenModal={handleOpenModal} />
       <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
+
+      <BookConsultationButton
+        ref={bookConsultationButtonRef}
+        onMouseEnter={handleOpenContactModal}
+      />
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={handleCloseContactModal}
+        buttonPosition={contactButtonPosition}
+      />
+
     </div>
   );
 };

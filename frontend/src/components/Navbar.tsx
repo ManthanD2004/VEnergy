@@ -26,9 +26,28 @@ const Navbar = forwardRef<HTMLElement>((props, ref) => {
             <Nav.Link as={Link} to="/" active={activeLink === '/'} onClick={() => handleLinkClick('/')}>Home</Nav.Link>
             <Nav.Link as={Link} to="/residential" active={activeLink === '/residential'} onClick={() => handleLinkClick('/residential')}>Residential</Nav.Link>
             <Nav.Link as={Link} to="/commercial" active={activeLink === '/commercial'} onClick={() => handleLinkClick('/commercial')}>Commercial</Nav.Link>
-            <Nav.Link href="#faq-section" active={activeLink === '#faq-section'} onClick={() => handleLinkClick('#faq-section')}>FAQs</Nav.Link>
             <Nav.Link as={Link} to="/about" active={activeLink === '/about'} onClick={() => handleLinkClick('/about')}>About Us</Nav.Link>
-            <Nav.Link href="tel:9000828333" className="navbar-phone-link">9000828333</Nav.Link>
+            <Nav.Link
+              href="tel:9000828333"
+              className="navbar-phone-link"
+              onClick={(e) => {
+                // Check if on a touch-enabled device (likely mobile)
+                const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+                if (isMobile) {
+                  // On mobile, allow the default tel: link behavior
+                  return true; // Let the default action proceed
+                } else {
+                  // On non-mobile (desktop), copy the number to clipboard
+                  e.preventDefault(); // Prevent default tel: link behavior
+                  navigator.clipboard.writeText('9000828333').then(() => {
+                    alert('Phone number copied: 9000828333');
+                  }).catch(err => {
+                    console.error('Failed to copy phone number: ', err);
+                  });
+                }
+              }}
+            >9000828333</Nav.Link>
           </Nav>
         </BootstrapNavbar.Collapse>
       </Container>

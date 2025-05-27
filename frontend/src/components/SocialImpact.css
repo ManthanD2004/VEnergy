@@ -1,0 +1,59 @@
+/* Styling for the Social Impact component */
+
+.social-impact-section {
+  padding: 4rem 2rem; /* Add padding around the section */
+  text-align: center; /* Center align content */
+}
+
+.social-impact-section h2 {
+  font-size: 2.5rem; /* Heading size */
+  color: white; /* Change heading color to white */
+  margin-bottom: 3rem; /* Space below heading */
+}
+
+.impact-cards-grid {
+  display: grid;
+  /* Set to 4 columns to ensure all cards are in one line */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; /* Space between cards */
+  max-width: 1200px; /* Max width of the grid */
+  margin: 0 auto; /* Center the grid */
+  /* Add overflow and padding for horizontal scrolling if needed */
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.impact-card {
+  background-color: #fff; /* White background */
+  border: 1px solid #c8e6c9; /* Light green border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2.5rem; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.impact-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.impact-icon {
+  font-size: 3rem; /* Icon size - adjust as needed */
+  color: #4CAF50; /* Green color for icons */
+  margin-bottom: 1rem; /* Space below icon */
+}
+
+.impact-value {
+  font-size: 2rem; /* Size for the numbers/values */
+  font-weight: bold;
+  color: #333; /* Dark grey color */
+  margin-bottom: 0.5rem; /* Space below value */
+}
+
+.impact-description {
+  font-size: 1rem;
+  color: #666; /* Medium grey color */
+} 

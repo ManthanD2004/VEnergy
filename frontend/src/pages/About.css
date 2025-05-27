@@ -1,0 +1,32 @@
+/* Basic styling for the About page */
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the App container takes at least the full viewport height */
+}
+
+.content-wrapper {
+  flex: 1; /* Allow content wrapper to grow and push footer down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  padding: 2rem 0; /* Add some padding */
+}
+
+.content-wrapper h1 {
+  font-size: 4rem;
+  color: white; /* Set heading color */
+  margin-top: 16rem; /* Add space above heading */
+}
+
+.full-width-image {
+  width: 100%; /* Make the image take the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+  margin-top: 2rem; /* Add space above the image */
+  margin-bottom: 2rem;
+  border-radius: 10%;
+} 

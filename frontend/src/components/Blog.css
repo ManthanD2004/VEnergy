@@ -44,8 +44,6 @@
 
 .news-card-content {
   padding: 1.5rem;
-  /* Removed position: relative */
-  /* Removed padding-bottom */
 }
 
 .news-card-content h3 {
@@ -62,7 +60,6 @@
   text-decoration: underline; /* Added underline */
   font-weight: bold;
   transition: color 0.3s ease;
-  /* Removed display and margin-top as absolute positioning handles placement */
 }
 
 .news-card-content .read-more:hover {

@@ -1,7 +1,7 @@
 import React from 'react';
-import './NewsSection.css';
+import './Blog.css';
 
-const NewsSection: React.FC = () => {
+const Blog: React.FC = () => {
   return (
     <section className="news-section">
       <h2>Blogs</h2>
@@ -33,9 +33,8 @@ const NewsSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <button className="news-read-more-button">Read more</button>
     </section>
   );
 };
 
-export default NewsSection; 
+export default Blog; 
