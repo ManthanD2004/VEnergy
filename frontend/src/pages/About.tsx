@@ -48,7 +48,6 @@ const About: React.FC = () => {
   return (
     <div className="App">
       <div className="content-wrapper">
-        <h1>About Us</h1>
         <AboutContent />
         <img src="/Picsart_25-05-27_17-04-26-792[1].jpg" alt="" className="full-width-image" />
         <SocialImpact />
