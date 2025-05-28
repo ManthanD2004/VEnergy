@@ -27,6 +27,7 @@ const Navbar = forwardRef<HTMLElement>((props, ref) => {
             <Nav.Link as={Link} to="/residential" active={activeLink === '/residential'} onClick={() => handleLinkClick('/residential')}>Residential</Nav.Link>
             <Nav.Link as={Link} to="/commercial" active={activeLink === '/commercial'} onClick={() => handleLinkClick('/commercial')}>Commercial</Nav.Link>
             <Nav.Link as={Link} to="/about" active={activeLink === '/about'} onClick={() => handleLinkClick('/about')}>About Us</Nav.Link>
+            <Nav.Link as={Link} to="/calculator" active={activeLink === '/calculator'} onClick={() => handleLinkClick('/calculator')}>Calculator</Nav.Link>
             <Nav.Link
               href="tel:9000828333"
               className="navbar-phone-link"

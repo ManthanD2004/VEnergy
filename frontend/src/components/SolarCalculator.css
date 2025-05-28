@@ -1,0 +1,178 @@
+.solar-calculator-section {
+  padding: 4rem 2rem;
+  /* background-color: #1a3d5e; Removed dark blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-page-container {
+  padding-top: 100px; /* Add padding to push content below the fixed Navbar */
+}
+
+.calculator-container {
+  background: linear-gradient(to bottom, #c4abd8, #18da21); /* Gradient background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 3rem; /* Increased gap */
+  max-width: 1200px; /* Increased max width */
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font */
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.input-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.or-calculate {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.or-calculate a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.or-calculate a:hover {
+  text-decoration: underline;
+}
+
+.results-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for result cards */
+  gap: 1rem;
+}
+
+.result-card {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.result-card .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #a8d144; /* Green placeholder color */
+  margin-right: 1rem;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  /* Add icon styling here, potentially using background-image */
+}
+
+.result-card .text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.result-card .text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.button-section {
+  grid-column: span 2; /* Span across both columns */
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 1rem; /* Space between buttons */
+  margin-top: 2rem;
+}
+
+.start-solar-journey,
+.interested-finance {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-solar-journey {
+  background-color: #a8d144; /* Green button color */
+  color: #333; /* Dark text color */
+  font-weight: bold;
+}
+
+.start-solar-journey:hover {
+  background-color: #95c23b; /* Slightly darker green on hover */
+}
+
+.interested-finance {
+  background-color: #f8f9fa; /* Light background */
+  color: #333; /* Dark text */
+  border: 1px solid #ccc; /* Add border */
+  font-weight: bold;
+}
+
+.interested-finance:hover {
+  background-color: #e9ecef; /* Slightly darker on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calculator-container {
+    grid-template-columns: 1fr; /* Stack columns on small screens */
+    gap: 2rem;
+  }
+
+  .results-section {
+    grid-template-columns: 1fr; /* Stack result cards on small screens */
+  }
+
+  .button-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .start-solar-journey,
+  .interested-finance {
+    width: 100%; /* Full width buttons on small screens */
+  }
+} 
