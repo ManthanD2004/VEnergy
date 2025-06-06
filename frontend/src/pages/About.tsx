@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
-import NewFooter from '../components/NewFooter';
 import './About.css'; // Import the CSS file
 import QuoteModal from '../components/QuoteModal'; // Import QuoteModal if needed by Footer
 import AboutContent from '../components/AboutContent'; // Import AboutContent
 import SocialImpact from '../components/SocialImpact'; // Import SocialImpact
 import ContactModal from '../components/ContactModal'; // Import ContactModal
 import BookConsultationButton from '../components/BookConsultationButton'; // Import BookConsultationButton
+import CalculatorFooter from '../components/CalculatorFooter';
 
 const About: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,7 +54,7 @@ const About: React.FC = () => {
         {/* No other content here as per request */}
       </div>
       {/* Pass onOpenModal prop if required by NewFooter */}
-      <NewFooter onOpenModal={handleOpenModal} />
+      <CalculatorFooter onOpenModal={handleOpenModal} />
       {/* Render QuoteModal if needed */}
       <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
 

@@ -2,10 +2,10 @@ import React, { useState, useRef } from 'react';
 import './Commercial.css';
 import FAQSection from '../components/FAQSection';
 import Testimonials from '../components/Testimonials';
-import NewFooter from '../components/NewFooter';
 import QuoteModal from '../components/QuoteModal';
 import ContactModal from '../components/ContactModal';
 import BookConsultationButton from '../components/BookConsultationButton';
+import CalculatorFooter from '../components/CalculatorFooter';
 
 const Commercial: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -107,8 +107,8 @@ const Commercial: React.FC = () => {
 
         <FAQSection />
 
-      <NewFooter onOpenModal={handleOpenModal} />
-      <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
+        <CalculatorFooter onOpenModal={handleOpenModal} />
+        <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
 
       <BookConsultationButton
         ref={bookConsultationButtonRef}

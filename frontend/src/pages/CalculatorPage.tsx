@@ -1,6 +1,6 @@
 import React from 'react';
 import SolarCalculator from '../components/SolarCalculator';
-import NewFooter from '../components/NewFooter';
+import CalculatorFooter from '../components/CalculatorFooter';
 // Import useOutletContext and OutletContextType
 import { useOutletContext } from 'react-router-dom';
 // Assuming OutletContextType is exported from App.tsx - adjust path if necessary
@@ -15,7 +15,7 @@ const CalculatorPage: React.FC = () => {
       {/* Navbar is handled by Layout */}
       <SolarCalculator onOpenQuoteModal={handleOpenModal} />
       {/* Assuming NewFooter also needs the modal handler - adjust if not */}
-      <NewFooter onOpenModal={handleOpenModal} />
+      <CalculatorFooter onOpenModal={handleOpenModal} />
     </div>
   );
 };

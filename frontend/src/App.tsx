@@ -8,7 +8,6 @@ import NewSection from './components/NewSection';
 import ImpactSection from './components/ImpactSection';
 import Blog from './components/Blog';
 import FAQSection from './components/FAQSection';
-import NewFooter from './components/NewFooter';
 import QuoteModal from './components/QuoteModal';
 import BookConsultationButton from './components/BookConsultationButton';
 import Testimonials from './components/Testimonials';
@@ -17,6 +16,7 @@ import Residential from './pages/Residential';
 import Commercial from './pages/Commercial';
 import About from './pages/About';
 import CalculatorPage from './pages/CalculatorPage';
+import CalculatorFooter from './components/CalculatorFooter';
 
 // Define and export a type for the outlet context
 export type OutletContextType = {
@@ -207,7 +207,7 @@ const Home: React.FC = () => {
       <Blog />
       <FAQSection />
       {/* Use handler from context */}
-      <NewFooter onOpenModal={handleOpenModal} />
+      <CalculatorFooter onOpenModal={handleOpenModal} />
       {/* QuoteModal and ContactModal are now rendered in Layout */}
       {/* <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} /> */}
       {/* <ContactModal

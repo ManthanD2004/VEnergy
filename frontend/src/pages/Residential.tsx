@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Residential.css';
 import FAQSection from '../components/FAQSection';
-import NewFooter from '../components/NewFooter';
 import Testimonials from '../components/Testimonials';
 import QuoteModal from '../components/QuoteModal';
 import ContactModal from '../components/ContactModal';
@@ -9,6 +8,7 @@ import BookConsultationButton from '../components/BookConsultationButton';
 import reducebills from '../assets/reducebills_icon.png';
 import subsidyicon from '../assets/subsidy_icon.png';
 import waranteeicon from '../assets/warranty_icon.png';
+import CalculatorFooter from '../components/CalculatorFooter';
 
 
 const Residential: React.FC = () => {
@@ -110,8 +110,8 @@ const Residential: React.FC = () => {
 
         <FAQSection />
 
-      <NewFooter onOpenModal={handleOpenModal} />
-      <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
+        <CalculatorFooter onOpenModal={handleOpenModal} />
+        <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />
 
       <BookConsultationButton
         ref={bookConsultationButtonRef}

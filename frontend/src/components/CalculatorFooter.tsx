@@ -1,11 +1,11 @@
 import React from 'react';
-import './NewFooter.css';
+import './CalculatorFooter.css';
 
-interface NewFooterProps {
+interface CalculatorFooterProps {
   onOpenModal: () => void;
 }
 
-const NewFooter: React.FC<NewFooterProps> = ({ onOpenModal }) => {
+const CalculatorFooter: React.FC<CalculatorFooterProps> = ({ onOpenModal }) => {
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
   };
@@ -38,4 +38,4 @@ const NewFooter: React.FC<NewFooterProps> = ({ onOpenModal }) => {
   );
 };
 
-export default NewFooter; 
+export default CalculatorFooter; 
