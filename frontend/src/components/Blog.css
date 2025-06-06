@@ -3,6 +3,7 @@
   text-align: center;
   background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); /* Gradient merging with sections above and below */
   color: #eee; /* Light text color for readability */
+  overflow: hidden; /* Hide overflow */
 }
 
 .news-section h2 {
@@ -13,12 +14,21 @@
 
 .news-cards-container {
   display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between cards */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  max-width: 1200px; /* Adjust max width as needed */
+  gap: 2rem;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding-bottom: 1rem; /* Space for scrollbar */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.news-cards-container::-webkit-scrollbar {
+  display: none;
 }
 
 .news-card {
@@ -26,14 +36,18 @@
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Hide overflow for rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  flex: 1;
-  min-width: 280px; /* Minimum width for cards */
-  max-width: 350px; /* Maximum width for cards */
+  flex: 0 0 350px; /* Fixed width, no grow or shrink */
+  min-width: 350px; /* Minimum width for cards */
   display: flex;
   flex-direction: column;
   text-align: left;
   position: relative; /* Add relative positioning */
   padding-bottom: 3rem; /* Add padding to make space for the absolutely positioned link */
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
 }
 
 .news-card img {

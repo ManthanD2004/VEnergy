@@ -11,7 +11,7 @@
 }
 
 .calculator-container {
-  background: linear-gradient(to bottom, #c4abd8, #18da21); /* Gradient background */
+  background: linear-gradient(to bottom, #d6cfdc, #7171d9); /* Gradient background */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -135,13 +135,14 @@
 }
 
 .start-solar-journey {
-  background-color: #a8d144; /* Green button color */
-  color: #333; /* Dark text color */
+  background-color: #012c60; /* blue button color */
+  color: #ffffff; /* Dark text color */
   font-weight: bold;
 }
 
 .start-solar-journey:hover {
-  background-color: #95c23b; /* Slightly darker green on hover */
+  background-color: #8fcae7; 
+  color: #000000;/* Slightly darker green on hover */
 }
 
 .interested-finance {
