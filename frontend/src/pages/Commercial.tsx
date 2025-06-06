@@ -62,7 +62,7 @@ const Commercial: React.FC = () => {
             <p>Significantly lower your electricity bills and improve your bottom line.</p>
           </div>
           <div className="benefit-card">
-            <h3>Tax Benefits</h3>
+            <h3>Tax <br/>Benefits</h3>
             <p>Take advantage of accelerated depreciation and other tax incentives.</p>
           </div>
           <div className="benefit-card">

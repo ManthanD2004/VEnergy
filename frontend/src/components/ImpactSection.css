@@ -39,7 +39,7 @@
 .impact-icon-placeholder {
   width: 80px; /* Size of icon area */
   height: 80px; /* Size of icon area */
-  background-color: #e0e0e0; /* Placeholder background for icons */
+  background-color: #ffffff; /* Placeholder background for icons */
   margin-bottom: 1.5rem;
   /* Add styles for actual icons when available */
 }
