@@ -11,7 +11,6 @@ const Testimonials: React.FC = () => {
         {/* Testimonial Card 1 */}
         <div className="testimonial-card">
           <div className="customer-image-container">
-            <img src="https://via.placeholder.com/100" alt="Customer 1" className="customer-image" />
           </div>
           <h3>Gajendra Shkya</h3>
           <p className="customer-location">
@@ -25,7 +24,6 @@ const Testimonials: React.FC = () => {
         {/* Testimonial Card 2 */}
         <div className="testimonial-card">
           <div className="customer-image-container">
-            <img src="https://via.placeholder.com/100" alt="Customer 2" className="customer-image" />
           </div>
           <h3>Uttam Malani</h3>
           <p className="customer-location">
@@ -39,7 +37,6 @@ const Testimonials: React.FC = () => {
         {/* Testimonial Card 3 */}
         <div className="testimonial-card">
           <div className="customer-image-container">
-            <img src="https://via.placeholder.com/100" alt="Customer 3" className="customer-image" />
           </div>
           <h3>Mahesh Mishra</h3>
           <p className="customer-location">

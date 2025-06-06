@@ -44,7 +44,7 @@
 .icon-placeholder {
   width: 60px; /* Size of icon area */
   height: 60px; /* Size of icon area */
-  background-color: #4caf50; /* Example icon background color */
+  background-color: #ffffff; /* Example icon background color */
   margin-bottom: 1.5rem; /* Space below icon */
   /* Add styles for actual icons when available */
 }
@@ -105,4 +105,11 @@
 .book-now-button:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} 
+}
+
+.step-icon-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
