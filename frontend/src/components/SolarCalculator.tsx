@@ -14,13 +14,15 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Placeholder values based on the image for 1 kW System Size and 2500 Electricity Bill
-  const systemSize = calcResult ? `${calcResult.system_size} kW` : (activeInput === 'systemSize' ? '1 kW' : '3 kW');
-  const spaceRequired = calcResult ? `${calcResult.space_required} sqft` : (activeInput === 'systemSize' ? '80 sqft' : '238 sqft');
-  const annualEnergyGenerated = calcResult ? `${calcResult.units} Units` : (activeInput === 'systemSize' ? '1,440 Units' : '4,286 Units');
-  const annualSavings = calcResult ? `₹ ${calcResult.savings}` : (activeInput === 'systemSize' ? '₹ 10,080' : '₹ 30,000');
-  const priceExcludingSubsidy = calcResult ? `₹ ${calcResult.price}` : (activeInput === 'systemSize' ? '₹ 98,769' : '₹ 1,99,138');
-  const subsidy = calcResult ? `₹ ${calcResult.subsidy}` : (activeInput === 'systemSize' ? '₹ 30,000' : '₹ 78,000');
+  // Show 0 until Calculate is clicked or if input is empty/zero
+  const isInputEmptyOrZero = !systemSizeKw || Number(systemSizeKw) === 0;
+  const showZero = !calcResult || isInputEmptyOrZero;
+  const systemSize = showZero ? '0 kW' : `${calcResult.system_size} kW`;
+  const spaceRequired = showZero ? '0 sqft' : `${calcResult.space_required} sqft`;
+  const annualEnergyGenerated = showZero ? '0 Units' : `${calcResult.units} Units`;
+  const annualSavings = showZero ? '₹ 0' : `₹ ${calcResult.savings}`;
+  const priceExcludingSubsidy = showZero ? '₹ 0' : `₹ ${calcResult.price}`;
+  const subsidy = showZero ? '₹ 0' : `₹ ${calcResult.subsidy}`;
 
   const handleSystemSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSystemSizeKw(event.target.value);
@@ -71,6 +73,13 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
     }
   };
 
+  // Trigger calculate on Enter key
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleCalculate();
+    }
+  };
+
   return (
     <div className="solar-calculator-section">
       <div className="calculator-container">
@@ -95,6 +104,7 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
                 onChange={handleSystemSizeChange}
                 min="1"
                 step="0.1"
+                onKeyDown={handleKeyDown}
               />
             </div>
           ) : (
@@ -105,6 +115,7 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
                 id="electricity-bill"
                 value={electricityBill}
                 onChange={handleElectricityBillChange}
+                onKeyDown={handleKeyDown}
               />
             </div>
           )}
@@ -151,13 +162,15 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
               <h3>{priceExcludingSubsidy}</h3>
              </div>
           </div>
-           <div className="result-card">
-             <div className="icon">{/* Subsidy Icon */}</div>
-             <div className="text">
-              <p>Subsidy</p>
-              <h3>{subsidy}</h3>
-             </div>
-          </div>
+          {solarType === 'Home' && (
+            <div className="result-card">
+              <div className="icon">{/* Subsidy Icon */}</div>
+              <div className="text">
+                <p>Subsidy</p>
+                <h3>{subsidy}</h3>
+              </div>
+            </div>
+          )}
         </div>
         <div className="button-section">
           <button className="start-solar-journey" onClick={onOpenQuoteModal}>Start Your Solar Journey</button>

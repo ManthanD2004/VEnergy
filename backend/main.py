@@ -77,21 +77,20 @@ def calculate(solar_type, unit_in_kw):
     if solar_type == 'Home':
         if not unit_in_kw <= 0:
             new_sys_size = sys_size + unit_in_kw
-            new_price = (price+100000)+(45000*unit_in_kw)
+            new_price = (price+100000)+(45000*(unit_in_kw-1))
             new_units = units + (1440 * unit_in_kw)
             new_space_req = space_req + (40*unit_in_kw)
             new_savings = savings + (10080*unit_in_kw)
-            if unit_in_kw >= 1 or unit_in_kw <= 2:
+            if 1 <= unit_in_kw <= 2:
                 new_subsidy = 30000
-                return new_sys_size, new_price, new_units, new_space_req, new_savings, new_subsidy
             else:
                 new_subsidy = 78000
-                return new_sys_size, new_price, new_units, new_space_req, new_savings, new_subsidy
+            return new_sys_size, new_price, new_units, new_space_req, new_savings, new_subsidy
 
     else:
         if not unit_in_kw <= 0:
             new_sys_size = sys_size + unit_in_kw
-            new_price = (price + 110000) + (30000 * unit_in_kw)
+            new_price = (price + 110000) + (30000 * (unit_in_kw-1))
             new_units = units + (1440 * unit_in_kw)
             new_space_req = space_req + (40 * unit_in_kw)
             new_savings = savings + (10080 * unit_in_kw)
