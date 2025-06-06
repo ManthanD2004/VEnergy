@@ -6,7 +6,9 @@ import Testimonials from '../components/Testimonials';
 import QuoteModal from '../components/QuoteModal';
 import ContactModal from '../components/ContactModal';
 import BookConsultationButton from '../components/BookConsultationButton';
-
+import reducebills from '../assets/reducebills_icon.png';
+import subsidyicon from '../assets/subsidy_icon.png';
+import waranteeicon from '../assets/warranty_icon.png';
 
 
 const Residential: React.FC = () => {
@@ -61,15 +63,18 @@ const Residential: React.FC = () => {
         <div className="benefits-grid">
           <div className="benefit-card">
             <h3>Reduce Electricity Bills</h3>
+            <img src={reducebills} alt="Money Saved Icon" className="benefit-icon-img" />
             <p>Save up to 90% on your monthly electricity bills with solar power.</p>
           </div>
           <div className="benefit-card">
             <h3>Government Subsidies</h3>
+            <img src={subsidyicon} alt="Money Saved Icon" className="benefit-icon-img" />
             <p>Avail up to 40% subsidy on your solar installation through government schemes.</p>
           </div>
           
           <div className="benefit-card">
             <h3>25-Year Warranty</h3>
+            <img src={waranteeicon} alt="Check Icon" className="benefit-icon-img" />
             <p>Long-term performance guarantee with our premium solar solutions.</p>
           </div>
         </div>

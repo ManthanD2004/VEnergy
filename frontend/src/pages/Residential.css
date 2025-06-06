@@ -61,7 +61,7 @@
 
 .benefit-card h3 {
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .benefit-card p {
@@ -191,4 +191,11 @@
   .residential-process-steps {
     grid-template-columns: 1fr;
   }
+}
+
+.benefit-icon-img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto 0.1rem;
 } 
