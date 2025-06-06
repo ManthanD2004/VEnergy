@@ -6,7 +6,7 @@
 }
 
 .para1{
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0) !important;
   margin-top: 145px;
   font-size: 1.8rem;
   font-weight: 600;

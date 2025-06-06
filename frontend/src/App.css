@@ -81,7 +81,7 @@
 .subtitle {
   font-size: 1.4rem;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0) !important;
   margin-bottom: 0.5rem;
   margin-top: 0;
 }
@@ -89,7 +89,7 @@
 .description {
   max-width: 800px;
   line-height: 1.6;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0) !important;
   margin-top: 15rem;
   font-weight: 600;
 }
