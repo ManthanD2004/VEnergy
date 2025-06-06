@@ -9,32 +9,66 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
   const [activeInput, setActiveInput] = useState('systemSize'); // 'systemSize' or 'electricityBill'
   const [systemSizeKw, setSystemSizeKw] = useState('1');
   const [electricityBill, setElectricityBill] = useState('2500'); // State for electricity bill
+  const [solarType, setSolarType] = useState('Home');
+  const [calcResult, setCalcResult] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Placeholder values based on the image for 1 kW System Size and 2500 Electricity Bill
-  const systemSize = activeInput === 'systemSize' ? '1 kW' : '3 kW'; // Example: change based on input mode
-  const spaceRequired = activeInput === 'systemSize' ? '80 sqft' : '238 sqft';
-  const annualEnergyGenerated = activeInput === 'systemSize' ? '1,440 Units' : '4,286 Units';
-  const annualSavings = activeInput === 'systemSize' ? '₹ 10,080' : '₹ 30,000';
-  const priceExcludingSubsidy = activeInput === 'systemSize' ? '₹ 98,769' : '₹ 1,99,138';
-  const subsidy = activeInput === 'systemSize' ? '₹ 30,000' : '₹ 78,000';
+  const systemSize = calcResult ? `${calcResult.system_size} kW` : (activeInput === 'systemSize' ? '1 kW' : '3 kW');
+  const spaceRequired = calcResult ? `${calcResult.space_required} sqft` : (activeInput === 'systemSize' ? '80 sqft' : '238 sqft');
+  const annualEnergyGenerated = calcResult ? `${calcResult.units} Units` : (activeInput === 'systemSize' ? '1,440 Units' : '4,286 Units');
+  const annualSavings = calcResult ? `₹ ${calcResult.savings}` : (activeInput === 'systemSize' ? '₹ 10,080' : '₹ 30,000');
+  const priceExcludingSubsidy = calcResult ? `₹ ${calcResult.price}` : (activeInput === 'systemSize' ? '₹ 98,769' : '₹ 1,99,138');
+  const subsidy = calcResult ? `₹ ${calcResult.subsidy}` : (activeInput === 'systemSize' ? '₹ 30,000' : '₹ 78,000');
 
   const handleSystemSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSystemSizeKw(event.target.value);
-    // TODO: Add logic here to recalculate results based on system size
+    setCalcResult(null);
   };
 
   const handleElectricityBillChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setElectricityBill(event.target.value);
-    // TODO: Add logic here to recalculate results based on electricity bill
+    setCalcResult(null);
   };
 
   const handleSolarTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    // setSolarType(event.target.value); // Not updating state since value is fixed for now
+    setSolarType(event.target.value);
+    setCalcResult(null);
   };
 
   const toggleInput = (input: 'systemSize' | 'electricityBill') => {
     setActiveInput(input);
-    // TODO: Maybe reset the other input's value when switching?
+    setCalcResult(null);
+  };
+
+  const handleCalculate = async () => {
+    setLoading(true);
+    setError(null);
+    setCalcResult(null);
+    try {
+      // For now, only system size is used for calculation
+      const response = await fetch('http://localhost:5000/calculator', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          solar_type: solarType,
+          units_in_kw: systemSizeKw,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setCalcResult(data);
+      } else {
+        setError(data.message || 'Calculation failed.');
+      }
+    } catch (err) {
+      setError('Network error. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -45,12 +79,11 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
           <p>Explore the Potential of Solar Energy and Start Saving From Day 1!</p>
           <div className="input-group">
             <label htmlFor="solar-need">Do You Need Solar For</label>
-            <select id="solar-need" value="Home">
+            <select id="solar-need" value={solarType} onChange={handleSolarTypeChange}>
               <option value="Home">Home</option>
               <option value="Commercial">Commercial</option>
             </select>
           </div>
-          
           {/* Conditionally render input based on activeInput state */}
           {activeInput === 'systemSize' ? (
             <div className="input-group">
@@ -60,6 +93,8 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
                 id="system-size"
                 value={systemSizeKw}
                 onChange={handleSystemSizeChange}
+                min="1"
+                step="0.1"
               />
             </div>
           ) : (
@@ -73,18 +108,14 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
               />
             </div>
           )}
-
-          <p className="or-calculate">
-            Or calculate savings using
-            {activeInput === 'systemSize' ? (
-              <a href="#" onClick={(e) => { e.preventDefault(); toggleInput('electricityBill'); }}> Monthly Electricity Bill</a>
-            ) : (
-              <a href="#" onClick={(e) => { e.preventDefault(); toggleInput('systemSize'); }}> System size(kW)</a>
-            )}
-          </p>
+          <div className="button-section">
+            <button className="calculate-btn" onClick={handleCalculate} disabled={loading}>
+              {loading ? 'Calculating...' : 'Calculate'}
+            </button>
+          </div>
+          {error && <div style={{ color: 'red', marginTop: '1rem' }}>{error}</div>}
         </div>
-
-        <div className="results-section">
+        <div>
           <div className="result-card">
             <div className="icon">{/* System Size Icon */}</div>
             <div className="text">
@@ -128,7 +159,6 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
              </div>
           </div>
         </div>
-
         <div className="button-section">
           <button className="start-solar-journey" onClick={onOpenQuoteModal}>Start Your Solar Journey</button>
         </div>
