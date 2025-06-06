@@ -56,6 +56,7 @@ class Inquiry(db.Model):
     finance_interest: Mapped[str] = mapped_column(String(20), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
 
+
 class ContactSubmission(db.Model):
     """Model for contact form submissions."""
     __tablename__ = 'contact_submissions'
@@ -66,6 +67,35 @@ class ContactSubmission(db.Model):
     email: Mapped[str] = mapped_column(String(100), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
 
+
+def calculate(solar_type, unit_in_kw):
+    price = 0
+    units = 0
+    space_req = 0
+    savings = 0
+    sys_size = 0
+    if solar_type == 'Home':
+        if not unit_in_kw <= 0:
+            new_sys_size = sys_size + unit_in_kw
+            new_price = (price+100000)+(45000*(unit_in_kw-1))
+            new_units = units + (1440 * unit_in_kw)
+            new_space_req = space_req + (40*unit_in_kw)
+            new_savings = savings + (10080*unit_in_kw)
+            if 1 <= unit_in_kw <= 2:
+                new_subsidy = 30000
+            else:
+                new_subsidy = 78000
+            return new_sys_size, new_price, new_units, new_space_req, new_savings, new_subsidy
+
+    else:
+        if not unit_in_kw <= 0:
+            new_sys_size = sys_size + unit_in_kw
+            new_price = (price + 110000) + (30000 * (unit_in_kw-1))
+            new_units = units + (1440 * unit_in_kw)
+            new_space_req = space_req + (40 * unit_in_kw)
+            new_savings = savings + (10080 * unit_in_kw)
+            new_subsidy = 0
+            return new_sys_size, new_price, new_units, new_space_req, new_savings, new_subsidy
 
 
 def send_notification_email(inquiry_id):
@@ -128,8 +158,8 @@ If you have any immediate questions, feel free to contact us directly.
 
 Best regards,
 Minsun Solar Team
-Phone: [Your Phone Number]
-Email: [Your Email]
+Phone: 7441100802
+Email: minsunbpl@gmail.com
         """
 
         # Send both emails
@@ -191,9 +221,10 @@ If you have any immediate questions, feel free to contact us directly.
 
 Best regards,
 Minsun Solar Team
-Phone: [Your Phone Number]
-Email: [Your Email]
-        """
+Phone: 7441100802
+Email: minsunbpl@gmail.com
+
+"""
 
         # Send both emails
         mail.send(admin_msg)
@@ -346,6 +377,57 @@ def submit_contact():
         }), 500
 
 
+@app.route("/calculator", methods=['POST'])
+def calculator():
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({
+                'success': False,
+                'message': 'No data provided'
+            }), 400
+
+        # Validate required fields
+        required_fields = ['solar_type', 'units_in_kw']
+        missing_fields = [field for field in required_fields if not data.get(field)]
+
+        if missing_fields:
+            return jsonify({
+                'success': False,
+                'message': f'Missing required fields: {", ".join(missing_fields)}'
+            }), 400
+
+        solar_type = data['solar_type']
+        units_in_kw = float(data['units_in_kw'])
+
+        result = calculate(solar_type, units_in_kw)
+        if not result:
+            return jsonify({
+                'success': False,
+                'message': 'Invalid input or calculation failed.'
+            }), 400
+
+        system_size, price, units, space_req, savings, subsidy = result
+
+        return jsonify({
+            'success': True,
+            'system_size': system_size,
+            'price': price,
+            'units': units,
+            'space_required': space_req,
+            'savings': savings,
+            'subsidy': subsidy
+        }), 200
+
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error in calculator: {e}")
+        return jsonify({
+            'success': False,
+            'message': 'An error occurred while processing your calculation. Please try again.'
+        }), 500
+
+
 # Optional: Add this route to view contact submissions (similar to your inquiries route)
 @app.route('/api/contacts', methods=['GET'])
 def get_contacts():
@@ -374,6 +456,7 @@ def get_contacts():
             'success': False,
             'message': 'Error fetching contacts'
         }), 500
+
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
