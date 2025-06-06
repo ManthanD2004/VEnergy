@@ -128,35 +128,30 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
         </div>
         <div>
           <div className="result-card">
-            <div className="icon">{/* System Size Icon */}</div>
             <div className="text">
               <p>System Size</p>
               <h3>{systemSize}</h3>
             </div>
           </div>
           <div className="result-card">
-             <div className="icon">{/* Space Required Icon */}</div>
              <div className="text">
               <p>Space Required</p>
               <h3>{spaceRequired}</h3>
              </div>
           </div>
           <div className="result-card">
-            <div className="icon">{/* Annual Energy Generated Icon */}</div>
              <div className="text">
               <p>Annual Energy Generated</p>
               <h3>{annualEnergyGenerated}</h3>
              </div>
           </div>
           <div className="result-card">
-            <div className="icon">{/* Annual Savings Icon */}</div>
              <div className="text">
               <p>Annual Savings</p>
               <h3>{annualSavings}</h3>
              </div>
           </div>
           <div className="result-card">
-            <div className="icon">{/* Price Excluding Subsidy Icon */}</div>
              <div className="text">
               <p>Price (Excluding Subsidy)</p>
               <h3>{priceExcludingSubsidy}</h3>
@@ -164,7 +159,6 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
           </div>
           {solarType === 'Home' && (
             <div className="result-card">
-              <div className="icon">{/* Subsidy Icon */}</div>
               <div className="text">
                 <p>Subsidy</p>
                 <h3>{subsidy}</h3>

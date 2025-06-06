@@ -194,7 +194,7 @@ const Home: React.FC = () => {
           {/* Use handler from context */}
           <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>
           <div className="description">
-            <p>Minsun Solar is a leading rooftop solar company, empowering homes and businesses across India with clean, reliable energy. MNRE-empanelled and customer-focused, we offer smart solar solutions, easy 0% EMI options, and dedicated support—making solar simple, affordable, and accessible for everyone.</p>
+            <p>Minsun Solar is a leading rooftop solar company, empowering homes and businesses. MNRE-empanelled and customer-focused, we offer smart solar solutions which are accessible for everyone.</p>
           </div>
         </main>
       </div>

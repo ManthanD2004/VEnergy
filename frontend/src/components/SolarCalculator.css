@@ -11,10 +11,10 @@
 }
 
 .calculator-container {
-  background: linear-gradient(to bottom, #d6cfdc, #7171d9); /* Gradient background */
+  background: linear-gradient(to bottom, #ffffff); /* Gradient background */
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
   gap: 3rem; /* Increased gap */
@@ -31,26 +31,27 @@
 .input-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #000000;
   text-align: left;
 }
 
 .input-section p {
   font-size: 1rem;
-  color: #555;
+  color: #000000;
   margin-bottom: 2rem;
   text-align: left;
 }
 
 .input-group {
+  margin-top: 40px;
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .input-group label {
   display: block;
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.2rem;
+  color: #000000;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -89,10 +90,11 @@
 .result-card {
   background-color: #f8f9fa;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #eee;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .result-card .icon {

@@ -80,8 +80,8 @@
 }
 
 .book-now-button {
-  background-color: #5e7e87;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
@@ -96,8 +96,9 @@
 }
 
 .book-now-button:hover {
-  background-color: #066a8f;
+  background-color: #000000;
   transform: translateY(-2px);
+  color: #ffffff;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 

@@ -29,7 +29,7 @@
 
 .benefits-section {
   padding: 4rem 2rem;
-  background-color: #333 !important;
+  background: linear-gradient(to bottom, #3D7ADE, #000000); /* Gradient merging with sections above and below */
 }
 
 .benefits-section h2 {
@@ -47,7 +47,7 @@
 }
 
 .benefit-card {
-  background: rgb(219, 21, 21);
+  background: #000000;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -70,7 +70,7 @@
 
 .process-section {
   padding: 4rem 2rem;
-  background-color: #333;
+  background: linear-gradient(to bottom, #000000, #3D7ADE); /* Gradient merging with sections above and below */
 }
 
 .process-section h2 {

@@ -1,7 +1,7 @@
 .news-section {
   padding: 4rem 0;
   text-align: center;
-  background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); /* Gradient merging with sections above and below */
+  background: linear-gradient(to bottom, #3D7ADE, #000000); /* Gradient matching Impact Section */
   color: #eee; /* Light text color for readability */
   overflow: hidden; /* Hide overflow */
 }
@@ -9,7 +9,7 @@
 .news-section h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #eee; /* Light color for heading */
+  color: #000000; /* Light color for heading */
 }
 
 .news-cards-container {

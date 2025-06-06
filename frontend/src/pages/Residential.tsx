@@ -101,13 +101,9 @@ const Residential: React.FC = () => {
         </div>
       </section>
 
-      <section className="testimonials-section">
         <Testimonials />
-      </section>
 
-      <section className="faq-section">
         <FAQSection />
-      </section>
 
       <NewFooter onOpenModal={handleOpenModal} />
       <QuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />

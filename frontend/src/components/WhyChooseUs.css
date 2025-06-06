@@ -65,7 +65,7 @@
   position: absolute;
   width: 600px;
   height: 600px;
-  background-color: #e0e0e0;
+  background-color: #b3ddf3;
   border-radius: 50%;
   opacity: 0.5;
   top: 50%;
@@ -78,13 +78,13 @@
   position: absolute;
   width: 400px;
   height: 400px;
-  background-color: #dea55b;
+  background-color: #093967;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #332c0f;
+  color: #ffffff;
   font-size: 2.5rem;
   font-weight: bold;
   z-index: 2;
@@ -122,13 +122,13 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #414033;
+  background-color: #538fb0;
   margin-right: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
-  color: white;
+  color: rgb(1, 1, 1);
 }
 
 .item-text {
