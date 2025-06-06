@@ -6,9 +6,11 @@
 }
 
 .para1{
-  color: white;
+  color: rgb(0, 0, 0);
   margin-top: 145px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  justify-content: center;
 }
 
 .benefits-section {

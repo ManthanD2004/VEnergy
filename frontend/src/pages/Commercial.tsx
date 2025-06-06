@@ -50,7 +50,7 @@ const Commercial: React.FC = () => {
           <h1 className='head'>Commercial Solar Solutions</h1>
           <p className="subtitle">Power your business with sustainable energy</p>
           <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>
-          <p className='para1'>Transform your business operations with our commercial solar solutions. Reduce operational costs and demonstrate your commitment to sustainability.</p>
+          <p className='para1'>Transform your business operations with our <br/>commercial solar solutions and reduce operational costs.</p>
         </div>
       </div>
       

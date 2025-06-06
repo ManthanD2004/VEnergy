@@ -74,14 +74,6 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
             </div>
           )}
 
-          <p className="or-calculate">
-            Or calculate savings using
-            {activeInput === 'systemSize' ? (
-              <a href="#" onClick={(e) => { e.preventDefault(); toggleInput('electricityBill'); }}> Monthly Electricity Bill</a>
-            ) : (
-              <a href="#" onClick={(e) => { e.preventDefault(); toggleInput('systemSize'); }}> System size(kW)</a>
-            )}
-          </p>
         </div>
 
         <div className="results-section">
