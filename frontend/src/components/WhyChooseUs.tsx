@@ -14,7 +14,7 @@ const WhyChooseUs: React.FC = () => {
             <div className="icon-circle">1</div>
             <div className="item-text">
               <h3>MNRE-Empanelled</h3>
-              <p>Custom-designed systems to match your energy needs and budget.    </p>
+              <p>Government-recognized for quality and compliance with national solar standards.    </p>
             </div>
           </div>
           <div className="feature-item">

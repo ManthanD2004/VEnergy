@@ -8,12 +8,12 @@ const SocialImpact: React.FC = () => {
       <div className="impact-cards-grid">
         <div className="impact-card">
           {/* Placeholder for Icon */}
-          <div className="impact-value">20 Lakh</div>
+          <div className="impact-value">2 Lakh</div>
           <div className="impact-description">Lives Impacted</div>
         </div>
         <div className="impact-card">
           {/* Placeholder for Icon */}
-          <div className="impact-value">82,500 Tons</div>
+          <div className="impact-value">5,000 Tons</div>
           <div className="impact-description">CO2 Emissions Reduced</div>
         </div>
         <div className="impact-card">
@@ -23,8 +23,8 @@ const SocialImpact: React.FC = () => {
         </div>
         <div className="impact-card">
           {/* Placeholder for Icon */}
-          <div className="impact-value">60%</div>
-          <div className="impact-description">Women in Leadership</div>
+          <div className="impact-value">2+</div>
+          <div className="impact-description">Years of Operations</div>
         </div>
       </div>
     </section>

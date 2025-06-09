@@ -54,7 +54,7 @@ const Blog: React.FC = () => {
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 1" />
           <div className="news-card-content">
-            <h3>Freyer Energy Launched Solar Experience Centre in Vijayawada</h3>
+            <h3>Minsun Solar Launched Solar Experience Centre in Bhopal</h3>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ const Blog: React.FC = () => {
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 2" />
           <div className="news-card-content">
-            <h3>Freyer Energy's Solar Experience Centre Opened in Karimnagar</h3>
+            <h3>Minsun Solar's Solar Experience Centre Opened in Indore</h3>
           </div>
         </div>
 
@@ -70,28 +70,28 @@ const Blog: React.FC = () => {
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 3" />
           <div className="news-card-content">
-            <h3>Andhra Pradesh's First Rooftop Solar Experience Centre Opens in Visakhapatnam</h3>
+            <h3>Maharashtra's First Rooftop Solar Experience Centre Opens in Nagpur</h3>
           </div>
         </div>
 
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 4" />
           <div className="news-card-content">
-            <h3>Andhra Pradesh's First Rooftop Solar Experience Centre Opens in Visakhapatnam</h3>
+            <h3>Installed a 5 kW grid-tied solar system for a family home in Ujjain, enabling over 80% reduction in electricity bills.</h3>
           </div>
         </div>
 
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 5" />
           <div className="news-card-content">
-            <h3>Andhra Pradesh's First Rooftop Solar Experience Centre Opens in Visakhapatnam</h3>
+            <h3>Completed a 25 kW rooftop solar system for a packaging facility in Pune. With smart inverters and battery backup.</h3>
           </div>
         </div>
-        {/* Duplicate Cards for seamless looping */}
+           {/* Duplicate Cards for seamless looping */}
          <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 1" />
           <div className="news-card-content">
-            <h3>Freyer Energy Launched Solar Experience Centre in Vijayawada</h3>
+            <h3>Minsun Solar Launched Solar Experience Centre in Pachmarhi</h3>
           </div>
         </div>
 
@@ -99,7 +99,7 @@ const Blog: React.FC = () => {
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 2" />
           <div className="news-card-content">
-            <h3>Freyer Energy's Solar Experience Centre Opened in Karimnagar</h3>
+            <h3>Minsun Solar's Solar Experience Centre Opened in Gwalior</h3>
           </div>
         </div>
 
@@ -107,21 +107,21 @@ const Blog: React.FC = () => {
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 3" />
           <div className="news-card-content">
-            <h3>Andhra Pradesh's First Rooftop Solar Experience Centre Opens in Visakhapatnam</h3>
+            <h3>Madhya Pradesh's HighTech Rooftop Solar Experience Centre Opens in Agarmalwa</h3>
           </div>
         </div>
 
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 4" />
           <div className="news-card-content">
-            <h3>Andhra Pradesh's First Rooftop Solar Experience Centre Opens in Visakhapatnam</h3>
+            <h3>Madhya Pradesh's Latest Rooftop Solar Experience Centre Opens in Raisen</h3>
           </div>
         </div>
 
         <div className="news-card">
           <img src="https://via.placeholder.com/350x200" alt="News Image 5" />
           <div className="news-card-content">
-            <h3>Andhra Pradesh's First Rooftop Solar Experience Centre Opens in Visakhapatnam</h3>
+            <h3>Madhya Pradesh's First Rooftop Solar Experience Centre Opens in Vidisha</h3>
           </div>
         </div>
       </div>

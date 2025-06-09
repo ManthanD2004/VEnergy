@@ -20,9 +20,9 @@ const CalculatorFooter: React.FC<CalculatorFooterProps> = ({ onOpenModal }) => {
         <div className="footer-contact-section">
           <a className="get-a-quote" onClick={onOpenModal}>GET A QUOTE</a>
           <div className="contact-info">
-            <p><span>&#9742;</span> 9000828333</p>
-            <p><span>&#9993;</span> sales@freyrenergy.com</p>
-            <p><span>&#9906;</span> Freyr Energy Services Pvt Ltd<br/>301, 3rd Floor, KKR Square, Kavuri Hills, Phase I, Road no. 36<br/>Hyderabad, India - 500033</p>
+            <p><span>&#9742;</span> 7441100802</p>
+            <p><span>&#9993;</span> minsunbpl@gmail.com</p>
+            <p><span>&#9906;</span> Minsun Renewable Solutions Pvt Ltd<br/> Ishaan park, A3 T3, Manak Vihar, Patel Nagar, Bhopal, Madhya Pradesh 462022</p>
           </div>
           <div className="social-icons">
             {/* Placeholder for social icons */}

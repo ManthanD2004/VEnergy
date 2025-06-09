@@ -41,14 +41,14 @@ const Navbar = forwardRef<HTMLElement>((props, ref) => {
                 } else {
                   // On non-mobile (desktop), copy the number to clipboard
                   e.preventDefault(); // Prevent default tel: link behavior
-                  navigator.clipboard.writeText('9000828333').then(() => {
-                    alert('Phone number copied: 9000828333');
+                  navigator.clipboard.writeText('7441100802').then(() => {
+                    alert('Phone number copied: 7441100802');
                   }).catch(err => {
                     console.error('Failed to copy phone number: ', err);
                   });
                 }
               }}
-            >9000828333</Nav.Link>
+            >7441100802</Nav.Link>
           </Nav>
         </BootstrapNavbar.Collapse>
       </Container>

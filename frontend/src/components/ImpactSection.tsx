@@ -14,28 +14,28 @@ const ImpactSection: React.FC = () => {
           <div className="impact-icon-placeholder">
             <img src={co2EmissionsReducedIcon} alt="CO2 Emissions Reduced Icon" className="impact-icon-img" />
           </div>
-          <h3>82,500 Tons</h3>
+          <h3>5,000 Tons</h3>
           <p>CO2 Emissions Reduced</p>
         </div>
         <div className="impact-card">
           <div className="impact-icon-placeholder">
             <img src={mwInstalledIcon} alt="MW Installed Icon" className="impact-icon-img" />
           </div>
-          <h3>100+</h3>
-          <p>MW Installed</p>
+          <h3>200+</h3>
+          <p>KW Installed</p>
         </div>
         <div className="impact-card">
           <div className="impact-icon-placeholder">
             <img src={livesImpactedIcon} alt="Lives Impacted Icon" className="impact-icon-img" />
           </div>
-          <h3>20 Lakh</h3>
+          <h3>2 Lakh</h3>
           <p>Lives Impacted</p>
         </div>
         <div className="impact-card">
           <div className="impact-icon-placeholder">
             <img src={savedAnnuallyIcon} alt="Saved Annually Icon" className="impact-icon-img" />
           </div>
-          <h3>₹562 Cr</h3>
+          <h3>₹2+ Cr</h3>
           <p>Saved Annually</p>
         </div>
       </div>

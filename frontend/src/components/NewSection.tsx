@@ -40,8 +40,9 @@ const NewSection: React.FC<NewSectionProps> = ({ onOpenModal }) => {
           </div>
           <h3>Review Proposal & Confirm Order</h3>
           <p>
-            Review your proposal and approve costing & design specification on
-            Freyr Energy App
+            Review everything upfront with
+            detailed proposal including cost estimates,
+            design specifications, and energy projections
           </p>
         </div>
         <div className="step-card">
@@ -65,7 +66,7 @@ const NewSection: React.FC<NewSectionProps> = ({ onOpenModal }) => {
           <h3>Your Site is Solar Powered</h3>
           <p>
             We offer 24X7 service support and proactive maintenance to ensure
-            that the system operates at peak efficiency with Freyr Energy App
+            that the system operates at peak efficiency.
           </p>
         </div>
       </div>

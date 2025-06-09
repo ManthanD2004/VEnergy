@@ -7,7 +7,7 @@ const AboutContent: React.FC = () => {
   const slides = [
     {
       title:"About Us",
-      content: "We Are India's Leading Solar Energy Company Freyr Energy is one of the renowned rooftop solar companies across India. We install solar panels for houses and businesses. With over 10,000+ delighted clients across India, we have been offering world-class solar solutions to homes and businesses since 2014. We are affiliated with MNRE. Freyr Energy, our revolutionary consumer app, offers smooth solar adoption and 24/7 service support. With simple zero-interest EMI alternatives, we hope to make rooftop solar accessible to everyone."
+      content: "We Are India's Leading Solar Energy Company Minsun Solar is one of the renowned rooftop solar companies across India. We install solar panels for houses and businesses. With over 1,000+ delighted clients across India, we have been offering world-class solar solutions to homes and businesses since 2014. We are affiliated with MNRE. We hope to make rooftop solar accessible to everyone."
     },
     {
       title: "Our Mission",
