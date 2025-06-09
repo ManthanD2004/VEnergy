@@ -11,7 +11,8 @@
 }
 
 .calculator-container {
-  background: linear-gradient(to bottom, #ffffff); /* Gradient background */
+  background: transparent; /* Changed from linear-gradient to transparent */
+  /* background: linear-gradient(to bottom, #ffffff); Removed white background */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
