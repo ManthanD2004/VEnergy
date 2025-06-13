@@ -19,16 +19,19 @@ CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+print("Username:", os.environ.get("MAIL_USER"))
+print("Password Length:", len(os.environ.get("MAIL_PASSWORD")))
+
 # Email Configuration - Hardcoded for now
 app.config['MAIL_SERVER'] = os.environ.get("MAIL_SERVER")
-app.config['MAIL_PORT'] = os.environ.get("MAIL_PORT")
+app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")  # Replace with your Gmail
+app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USER")  # Replace with your Gmail
 app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")  # Replace with your Gmail app password
-app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_DEFAULT_SENDER")  # Replace with your Gmail
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_USER")  # Replace with your Gmail
 
 # Admin email for receiving notifications
-ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL") # Replace with your admin email
+ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL")  # Replace with your admin email
 
 
 class Base(DeclarativeBase):
