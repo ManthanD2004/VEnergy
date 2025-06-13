@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SolarCalculator.css';
+import { API_BASE } from '../config';
 
 interface SolarCalculatorProps {
   onOpenQuoteModal: () => void;
@@ -50,7 +51,7 @@ const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onOpenQuoteModal }) =
     setCalcResult(null);
     try {
       // For now, only system size is used for calculation
-      const response = await fetch('http://localhost:5000/calculator', {
+      const response = await fetch(`${API_BASE}/calculator`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

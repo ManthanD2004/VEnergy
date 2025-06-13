@@ -1,0 +1,1 @@
+export const API_BASE = "https://minsun-solar-solutions-uavc.onrender.com"; 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './QuoteModal.css';
+import { API_BASE } from '../config';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -67,7 +68,7 @@ const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
   };
 
   const submitToBackend = async (data: FormData): Promise<ApiResponse> => {
-    const response = await fetch('http://localhost:5000/api/submit-inquiry', {
+    const response = await fetch(`${API_BASE}/api/submit-inquiry`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

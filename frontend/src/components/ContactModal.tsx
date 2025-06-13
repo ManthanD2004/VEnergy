@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ContactModal.css';
+import { API_BASE } from '../config';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -28,7 +29,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, buttonPosi
     setSubmitMessage('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${API_BASE}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
