@@ -10,25 +10,25 @@ from sqlalchemy import Integer, String, DateTime
 
 
 # Load environment variables (optional now)
-# load_dotenv()
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
 # Database Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///solar_inquiries.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Email Configuration - Hardcoded for now
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_SERVER'] = os.environ.get("MAIL_SERVER")
+app.config['MAIL_PORT'] = os.environ.get("MAIL_PORT")
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'manthan21deshpande@gmail.com'  # Replace with your Gmail
-app.config['MAIL_PASSWORD'] = 'nxjn npmi vysp iakf'  # Replace with your Gmail app password
-app.config['MAIL_DEFAULT_SENDER'] = 'manthan21deshpande@gmail.com'  # Replace with your Gmail
+app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")  # Replace with your Gmail
+app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")  # Replace with your Gmail app password
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_DEFAULT_SENDER")  # Replace with your Gmail
 
 # Admin email for receiving notifications
-ADMIN_EMAIL = 'manthandeshpande8@gmail.com'  # Replace with your admin email
+ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL") # Replace with your admin email
 
 
 class Base(DeclarativeBase):
@@ -478,4 +478,4 @@ def init_db():
 if __name__ == '__main__':
     init_db()
     print("Starting Flask server on http://localhost:5000")
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)
