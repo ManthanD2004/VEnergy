@@ -68,20 +68,29 @@ const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
   };
 
   const submitToBackend = async (data: FormData): Promise<ApiResponse> => {
-    const response = await fetch(`${API_BASE}/api/submit-inquiry`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      console.log('Submitting data:', data); // Log the data being sent
+      const response = await fetch(`${API_BASE}/api/submit-inquiry`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+      console.log('Response status:', response.status); // Log the response status
+      const responseData = await response.json();
+      console.log('Response data:', responseData); // Log the response data
+
+      if (!response.ok) {
+        throw new Error(responseData.message || `HTTP error! status: ${response.status}`);
+      }
+
+      return responseData;
+    } catch (error) {
+      console.error('Detailed submission error:', error);
+      throw error;
     }
-
-    return await response.json();
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -118,7 +127,7 @@ const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
       console.error('Submission error:', error);
       setSubmitMessage(
         error instanceof Error
-          ? error.message
+          ? `Error: ${error.message}`
           : 'Network error. Please check your connection and try again.'
       );
       setSubmitSuccess(false);
