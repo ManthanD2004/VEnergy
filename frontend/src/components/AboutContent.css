@@ -106,3 +106,26 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .about-content {
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+  }
+
+  .slider-container {
+    height: 400px;
+    padding: 0.5rem;
+    margin-right: 0;
+  }
+
+  .slide h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .slide p {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
+

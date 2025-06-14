@@ -95,4 +95,62 @@
 
 .submit-button:hover {
   background-color: #5e35b1;
+}
+
+@media (max-width: 768px) {
+  .contact-modal-content {
+    width: 90%;
+    max-width: 350px;
+    padding: 0.6rem 1rem;
+  }
+
+  .contact-modal-header h2 {
+    font-size: 1rem;
+  }
+
+  .close-button {
+    font-size: 1.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-group input {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .submit-button {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-modal-content {
+    width: 95%;
+    max-width: 300px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .contact-modal-header h2 {
+    font-size: 0.9rem;
+  }
+
+  .close-button {
+    font-size: 1.2rem;
+  }
+
+  .form-group input {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .submit-button {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
 } 

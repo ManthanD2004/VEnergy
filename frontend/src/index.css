@@ -100,3 +100,62 @@ code {
   background-color: white; /* White background on hover */
   color: black !important; /* Black text color on hover */
 }
+
+@media (max-width: 992px) {
+  .navbar {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 0.5rem auto !important; /* Adjust margin */
+  }
+
+  .navbar .container {
+    padding: 0 0.5rem; /* Adjust padding */
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem !important; /* Adjust padding for nav links */
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .nav-link.navbar-phone-link {
+    margin-left: 0.5rem; /* Adjust margin for phone link */
+    padding: 0.4rem 0.8rem !important; /* Adjust padding */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%; /* Further adjust width for very small screens */
+    margin: 0.3rem auto !important;
+  }
+
+  .navbar-toggler {
+    display: block; /* Ensure toggler is visible */
+  }
+
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8); /* Background for collapsed menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .nav-link {
+    padding: 0.8rem 1rem !important; /* More padding for touch targets */
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link.navbar-phone-link {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 0.5rem; /* Add top margin */
+  }
+}

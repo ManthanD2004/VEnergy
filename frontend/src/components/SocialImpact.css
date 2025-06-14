@@ -56,4 +56,85 @@
 .impact-description {
   font-size: 1rem;
   color: #666; /* Medium grey color */
+}
+
+@media (max-width: 992px) {
+  .social-impact-section h2 {
+    font-size: 2rem;
+  }
+
+  .impact-cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    gap: 1.5rem;
+  }
+
+  .impact-card {
+    padding: 2rem;
+  }
+
+  .impact-icon {
+    font-size: 2.5rem;
+  }
+
+  .impact-value {
+    font-size: 1.8rem;
+  }
+
+  .impact-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-impact-section {
+    padding: 2rem 1rem;
+  }
+
+  .social-impact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .impact-cards-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem;
+  }
+
+  .impact-card {
+    padding: 1.5rem;
+  }
+
+  .impact-icon {
+    font-size: 2rem;
+  }
+
+  .impact-value {
+    font-size: 1.5rem;
+  }
+
+  .impact-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-impact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .impact-card {
+    padding: 1.2rem;
+  }
+
+  .impact-icon {
+    font-size: 1.8rem;
+  }
+
+  .impact-value {
+    font-size: 1.3rem;
+  }
+
+  .impact-description {
+    font-size: 0.85rem;
+  }
 } 

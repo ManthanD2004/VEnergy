@@ -78,4 +78,48 @@
 .segment-overlay h3 {
   margin: 0;
   font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .customer-segments-section {
+    padding: 2rem 1rem;
+  }
+
+  .customer-segments-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .segments-container {
+    flex-direction: column; /* Stack segments vertically */
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .segment-item {
+    width: 90%; /* Adjust width for better fit on small screens */
+    max-width: 400px; /* Limit max width for readability */
+  }
+
+  .segment-overlay {
+    padding: 15px;
+  }
+
+  .segment-overlay h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .customer-segments-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .segment-item {
+    width: 95%;
+  }
+
+  .segment-overlay h3 {
+    font-size: 1.1rem;
+  }
 } 
