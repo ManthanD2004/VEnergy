@@ -38,6 +38,7 @@ class Base(DeclarativeBase):
     pass
 
 
+
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 mail = Mail(app)
@@ -69,6 +70,10 @@ class ContactSubmission(db.Model):
     phone: Mapped[str] = mapped_column(String(20), nullable=False)
     email: Mapped[str] = mapped_column(String(100), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+
+
+with app.app_context():
+    db.create_all()
 
 
 def calculate(solar_type, unit_in_kw):
