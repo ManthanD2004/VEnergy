@@ -123,4 +123,71 @@
 
 .submit-button:hover {
   background-color: #7cb342; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .close-button {
+    font-size: 1.5rem;
+  }
+
+  .modal-form-columns {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .city-state-container {
+    flex-direction: column; /* Stack city and state inputs vertically */
+    gap: 0.8rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .close-button {
+    font-size: 1.3rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
 } 

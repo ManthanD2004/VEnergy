@@ -65,8 +65,6 @@
   color: #333; /* Dark text for heading */
 }
 
-
-
 .news-card-content .read-more:hover {
   color: #333; /* Slightly lighter black on hover */
 }
@@ -95,4 +93,71 @@
 .news-read-more-button:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .news-section {
+    padding: 2rem 1rem;
+  }
+
+  .news-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .news-cards-container {
+    padding: 0 0.5rem;
+  }
+
+  .news-card {
+    flex: 0 0 280px; /* Slightly smaller card width for tablets */
+    min-width: 280px;
+  }
+
+  .news-card img {
+    height: 120px;
+  }
+
+  .news-card-content {
+    padding: 1rem;
+  }
+
+  .news-card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .news-read-more-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .news-cards-container {
+    flex-direction: row; /* Keep horizontal scroll for mobile */
+    padding: 0 0.5rem;
+  }
+
+  .news-card {
+    flex: 0 0 250px; /* Further decrease card width for small phones */
+    min-width: 250px;
+    padding-bottom: 2.5rem;
+  }
+
+  .news-card img {
+    height: 100px;
+  }
+
+  .news-card-content h3 {
+    font-size: 1rem;
+  }
+
+  .news-read-more-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
 } 

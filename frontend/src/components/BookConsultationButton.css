@@ -19,4 +19,25 @@
 .book-consultation-button:hover {
   background-color: #ffffff; 
   color: black;/* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .book-consultation-button {
+    top: auto;
+    bottom: 20px; /* Position at the bottom for mobile */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    rotate: 0deg; /* Remove rotation for mobile */
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-consultation-button {
+    bottom: 15px;
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
 } 

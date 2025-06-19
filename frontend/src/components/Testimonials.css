@@ -81,4 +81,54 @@
   font-size: 1rem;
   line-height: 1.5;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 2rem 1rem;
+  }
+
+  .testimonials-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .testimonials-cards-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    max-width: 90%; /* Adjust max-width for better fit on small screens */
+    margin: 0 auto; /* Center the cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-header h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .customer-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .play-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .testimonial-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .customer-location,
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
 } 

@@ -113,3 +113,76 @@
   display: block;
   object-fit: contain;
 }
+
+@media (max-width: 992px) {
+  .steps-container {
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .step-card {
+    width: 48%; /* Two cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .new-section {
+    padding: 2rem 1rem;
+  }
+
+  .new-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .steps-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .step-card {
+    width: 90%; /* Almost full width for single column */
+    padding: 1.5rem;
+  }
+
+  .icon-placeholder {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .step-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .step-card p {
+    font-size: 0.9rem;
+  }
+
+  .step-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .book-now-button {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .step-card {
+    width: 95%;
+  }
+
+  .book-now-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

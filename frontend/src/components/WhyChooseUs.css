@@ -101,6 +101,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 
 .feature-item {
@@ -184,5 +185,162 @@
 .features-list .feature-item:nth-child(6) {
   top: 80%;
   left: 30%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .why-choose-us-container {
+    width: 90%;
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .background-circle {
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .main-circle {
+    width: 300px;
+    height: 300px;
+    font-size: 2rem;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .features-list {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 250px; /* Adjust based on main-circle height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 500px;
+    justify-content: center;
+  }
+
+  .item-text {
+    width: auto;
+    text-align: left;
+  }
+
+  .features-list .feature-item:nth-child(1),
+  .features-list .feature-item:nth-child(2),
+  .features-list .feature-item:nth-child(3),
+  .features-list .feature-item:nth-child(4),
+  .features-list .feature-item:nth-child(5),
+  .features-list .feature-item:nth-child(6) {
+    top: auto;
+    left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    margin-top: 50px;
+    padding: 2rem 1rem;
+  }
+
+  .why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .background-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .main-circle {
+    width: 250px;
+    height: 250px;
+    font-size: 1.5rem;
+  }
+
+  .features-list {
+    margin-top: 200px;
+    gap: 1rem;
+  }
+
+  .feature-item {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .icon-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .item-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .item-text p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .background-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .main-circle {
+    width: 200px;
+    height: 200px;
+    font-size: 1.2rem;
+  }
+
+  .features-list {
+    margin-top: 150px;
+  }
+
+  .feature-item {
+    width: 100%;
+    padding: 0.6rem;
+    flex-direction: column; /* Stack icon and text */
+    text-align: center;
+  }
+
+  .icon-circle {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .item-text {
+    text-align: center;
+  }
+
+  .item-text h3 {
+    font-size: 0.85rem;
+  }
+
+  .item-text p {
+    font-size: 0.7rem;
+  }
 }
 
