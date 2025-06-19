@@ -29,7 +29,7 @@ const Navbar = forwardRef<HTMLElement>((props, ref) => {
             <Nav.Link as={Link} to="/about" active={activeLink === '/about'} onClick={() => handleLinkClick('/about')}>About Us</Nav.Link>
             <Nav.Link as={Link} to="/calculator" active={activeLink === '/calculator'} onClick={() => handleLinkClick('/calculator')}>Calculator</Nav.Link>
             <Nav.Link
-              href="tel:9000828333"
+              href="tel:7441100802"
               className="navbar-phone-link"
               onClick={(e) => {
                 // Check if on a touch-enabled device (likely mobile)
