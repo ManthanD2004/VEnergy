@@ -17,7 +17,7 @@ const Navbar = forwardRef<HTMLElement>((props, ref) => {
   return (
     <BootstrapNavbar ref={ref} expand="lg" className="py-3 mb-4" fixed="top">
       <Container>
-        <BootstrapNavbar.Brand as={Link} to="/" className="d-flex align-items-center" onClick={() => handleLinkClick('/')}>
+        <BootstrapNavbar.Brand as={Link} to="/" className="d-flex align-items-center ms-4" onClick={() => handleLinkClick('/')}>
           <span className="fs-4">Minsun Solar</span>
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />

@@ -10,21 +10,28 @@
 } */
 
 
-.head{
-  margin-top: auto;
+.head {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 
 .subtitle{
   margin-top: 20px;
   margin-bottom: 120px;
+  color: #fff !important;
+  font-weight: bold;
+}
+.para, .description {
+  color: #fff !important;
+  font-weight: bold;
 }
 .para{
-  color: rgb(0, 0, 0) !important;
   margin-top: 160px;
   font-size: 1.7rem;
-  font-weight: 600;
-  justify-content: center;
 }
 
 .benefits-section {
@@ -33,9 +40,11 @@
 }
 
 .benefits-section h2 {
-  font-size: 2rem;
-  color: white !important;
-  margin-bottom: 3rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .benefits-grid {
@@ -74,9 +83,11 @@
 }
 
 .process-section h2 {
-  font-size: 2rem;
-  color: white !important;
-  margin-bottom: 3rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .residential-process-steps {

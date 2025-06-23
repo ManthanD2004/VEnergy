@@ -21,8 +21,8 @@ const ImpactSection: React.FC = () => {
           <div className="impact-icon-placeholder">
             <img src={mwInstalledIcon} alt="MW Installed Icon" className="impact-icon-img" />
           </div>
-          <h3>200+</h3>
-          <p>KW Installed</p>
+          <h3>200+ KW</h3>
+          <p>Panels Installed</p>
         </div>
         <div className="impact-card">
           <div className="impact-icon-placeholder">

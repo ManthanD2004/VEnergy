@@ -5,9 +5,11 @@
 }
 
 .testimonials-header h2 {
-  color: rgb(0, 0, 0) !important;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .testimonials-cards-container {
@@ -80,7 +82,7 @@
   color: #666 !important;
   font-size: 1rem;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

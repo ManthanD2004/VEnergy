@@ -96,17 +96,22 @@
 
 .footer-contact-section .get-a-quote {
   display: inline-block;
+  background-color: #fff;
+  color: #000;
   border: 2px solid #fff;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 2rem;
   text-decoration: none;
   margin-bottom: 1.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .footer-contact-section .get-a-quote:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #012c60;
+  color: #fff;
+  border-color: #012c60;
+  transform: translateY(-2px);
 }
 
 .contact-info p {

@@ -5,12 +5,14 @@
   flex-direction: column;
 }
 
+.para1, .description {
+  color: #fff !important;
+  font-weight: bold;
+}
+
 .para1{
-  color: rgb(0, 0, 0) !important;
   margin-top: 145px;
   font-size: 1.8rem;
-  font-weight: 600;
-  justify-content: center;
 }
 
 .benefits-section {
@@ -198,4 +200,17 @@
   .process-steps {
     grid-template-columns: 1fr;
   }
+}
+
+.head {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.subtitle {
+  color: #fff !important;
+  font-weight: bold;
 } 

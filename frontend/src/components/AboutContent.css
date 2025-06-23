@@ -41,18 +41,17 @@
 }
 
 .slide h2 {
-  font-size: 3.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
   margin-bottom: 2.5rem;
-  color: rgb(0, 0, 0) !important;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 700;
 }
 
 .slide p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: rgb(0, 0, 0) !important;
+  color: #fff !important;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -127,5 +126,15 @@
     font-size: 0.9rem;
     padding: 0 0.5rem;
   }
+}
+
+.subtitle {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.description {
+  color: #fff !important;
+  font-weight: bold;
 }
 

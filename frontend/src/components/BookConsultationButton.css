@@ -24,13 +24,21 @@
 @media (max-width: 768px) {
   .book-consultation-button {
     top: auto;
-    bottom: 20px; /* Position at the bottom for mobile */
+    bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    rotate: 0deg; /* Remove rotation for mobile */
+    transform: translateX(-50%);
+    rotate: 0deg;
     padding: 8px 15px;
     font-size: 0.9rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    color: #012c60;
+    border: 2px solid #012c60;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .book-consultation-button:hover {
+    background-color: #012c60;
+    color: #fff;
   }
 }
 

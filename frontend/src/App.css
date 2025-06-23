@@ -69,7 +69,7 @@
 
 .content-wrapper h1{
     font-size: 4rem;
-    color: rgb(0, 0, 0) !important;
+    color: #fff !important;
     margin-top: 16rem;
 }
 
@@ -80,8 +80,8 @@
 
 .subtitle {
   font-size: 1.4rem;
-  font-weight: 3SS00;
-  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+  color: #fff !important;
   margin-bottom: 0.5rem;
   margin-top: 0;
 }
@@ -89,7 +89,7 @@
 .description {
   max-width: 800px;
   line-height: 1.6;
-  color: rgb(0, 0, 0) !important;
+  color: #fff !important;
   margin-top: 15rem;
   font-weight: 600;
 }

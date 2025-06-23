@@ -7,11 +7,11 @@
 }
 
 .faq-section h2 {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 2rem;
-  color: white !important;
-  font-size: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.5rem;
 }
 
 .faq-list {
@@ -121,6 +121,7 @@
 
   .faq-question p {
     font-size: 0.95rem;
+    text-align: left;
   }
 
   .faq-icon {
@@ -133,6 +134,7 @@
 
   .faq-answer p {
     font-size: 0.9rem;
+    text-align: left;
   }
 }
 
