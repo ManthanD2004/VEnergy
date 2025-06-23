@@ -17,6 +17,7 @@ import Commercial from './pages/Commercial';
 import About from './pages/About';
 import CalculatorPage from './pages/CalculatorPage';
 import CalculatorFooter from './components/CalculatorFooter';
+import SolarCalculator from './components/SolarCalculator';
 
 // Define and export a type for the outlet context
 export type OutletContextType = {
@@ -199,6 +200,7 @@ const Home: React.FC = () => {
         </main>
       </div>
       <WhyChooseUs />
+      <SolarCalculator onOpenQuoteModal={handleOpenModal} />
       <CustomerSegments />
       {/* Use handler from context */}
       <NewSection onOpenModal={handleOpenModal} />

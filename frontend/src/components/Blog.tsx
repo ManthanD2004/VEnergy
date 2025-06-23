@@ -60,8 +60,8 @@ const Blog: React.FC = () => {
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         centeredSlides={false}
         breakpoints={{
-          320: { slidesPerView: 1, centeredSlides: true, spaceBetween: 0 },
-          600: { slidesPerView: 2, centeredSlides: false, spaceBetween: 8 },
+          320: { slidesPerView: 1, centeredSlides: true, spaceBetween: 8 },
+          600: { slidesPerView: 2, centeredSlides: false, spaceBetween: 12 },
           900: { slidesPerView: 3, centeredSlides: false, spaceBetween: 24 }
         }}
       >

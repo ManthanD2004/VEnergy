@@ -39,14 +39,14 @@
 
 .input-section p {
   font-size: 1rem;
-  color: #000000;
-  margin-bottom: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.1rem;
   text-align: left;
 }
 
 .input-group {
-  margin-top: 40px;
-  margin-bottom: 1.5rem;
+  margin-top: 25px;
+  margin-bottom: 0.10rem;
   text-align: left;
 }
 
@@ -90,12 +90,15 @@
 }
 
 .result-card {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   background-color: #f8f9fa;
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid #eee;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 
@@ -108,16 +111,26 @@
   /* Add icon styling here, potentially using background-image */
 }
 
+.result-card .text {
+  text-align: left;
+  width: 100%;
+}
+
+.result-card .text h3,
 .result-card .text p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
+  text-align: left;
 }
 
 .result-card .text h3 {
   margin: 0;
   font-size: 1.2rem;
   color: #333;
+}
+
+.result-card .text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .button-section {
@@ -161,7 +174,7 @@
 }
 
 .calculate-btn {
-  background-color: #007bff;
+  background-color: #012c60; ;
   color: #fff;
   padding: 1rem 2rem;
   border: none;
@@ -173,12 +186,12 @@
 }
 
 .calculate-btn:disabled {
-  background-color: #b0b0b0;
+  background-color: #000000;;
   cursor: not-allowed;
 }
 
 .calculate-btn:hover:not(:disabled) {
-  background-color: #0056b3;
+  background-color: #8fcae7;
 }
 
 /* Responsive adjustments */
@@ -281,8 +294,8 @@
   }
 
   .input-group {
-    margin-top: 20px;
-    margin-bottom: 1rem;
+    margin-top: 2px;
+    margin-bottom: 0.1rem;
   }
 
   .input-group label {
@@ -356,7 +369,7 @@
 
   .input-group {
     margin-top: 15px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.01rem;
   }
 
   .input-group label {

@@ -24,7 +24,7 @@
 }
 
 .feature-item {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fff !important;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -73,6 +73,7 @@
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
+  margin-bottom: 6rem;
 }
 
 .main-circle {
@@ -233,6 +234,7 @@
     width: 90%;
     max-width: 500px;
     justify-content: center;
+    background-color: #fff !important;
   }
 
   .item-text {
@@ -283,6 +285,7 @@
   .feature-item {
     width: 95%;
     padding: 0.8rem;
+    background-color: #fff !important;
   }
 
   .icon-circle {
@@ -301,8 +304,19 @@
 }
 
 @media (max-width: 480px) {
+  .why-choose-us {
+    padding-top: 100rem;
+  }
   .why-choose-us h2 {
-    font-size: 1.8rem;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    color: #012c60;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto 1.5rem auto;
+    font-weight: bold;
   }
 
   .background-circle {
@@ -317,7 +331,7 @@
   }
 
   .features-list {
-    margin-top: 150px;
+    padding-top: 3rem; /* Adjust as needed */
   }
 
   .feature-item {
@@ -325,6 +339,7 @@
     padding: 0.6rem;
     flex-direction: column; /* Stack icon and text */
     text-align: center;
+    background-color: #fff !important;
   }
 
   .icon-circle {
