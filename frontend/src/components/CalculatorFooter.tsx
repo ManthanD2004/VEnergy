@@ -22,7 +22,7 @@ const CalculatorFooter: React.FC<CalculatorFooterProps> = ({ onOpenModal }) => {
           <div className="contact-info">
             <p><span>&#9742;</span> 7441100802</p>
             <p><span>&#9993;</span> minsunbpl@gmail.com</p>
-            <p><span>&#9906;</span> Minsun Renewable Solutions Pvt Ltd<br/> Ishaan park, A3 T3, Manak Vihar, Patel Nagar, Bhopal, Madhya Pradesh 462022</p>
+            <p><span>&#9906;</span> Minsun Renewable Solutions LLM<br/> Ishaan park, A3 T3, Manak Vihar, Patel Nagar, Bhopal, Madhya Pradesh 462022</p>
           </div>
           <div className="social-icons">
             {/* Placeholder for social icons */}
