@@ -60,50 +60,57 @@
 
 @media (max-width: 768px) {
   .impact-section {
-    padding: 2rem 1rem;
+    padding: 2rem 0.2rem;
   }
-
-  .impact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
   .impact-cards-container {
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: stretch;
   }
-
   .impact-card {
-    min-width: 180px;
-    max-width: 90%;
-    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1rem;
   }
-
   .impact-icon-placeholder {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.7rem;
   }
-
   .impact-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
-
   .impact-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .impact-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
-
   .impact-cards-container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
   }
-
   .impact-card {
-    max-width: 95%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0.7rem;
+  }
+  .impact-icon-placeholder {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.5rem;
+  }
+  .impact-card h3 {
+    font-size: 1rem;
+  }
+  .impact-card p {
+    font-size: 0.8rem;
   }
 } 

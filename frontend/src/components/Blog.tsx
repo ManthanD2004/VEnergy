@@ -58,10 +58,11 @@ const Blog: React.FC = () => {
         slidesPerView={3}
         loop={true}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
+        centeredSlides={false}
         breakpoints={{
-          320: { slidesPerView: 1 },
-          600: { slidesPerView: 2 },
-          900: { slidesPerView: 3 }
+          320: { slidesPerView: 1, centeredSlides: true },
+          600: { slidesPerView: 2, centeredSlides: false },
+          900: { slidesPerView: 3, centeredSlides: false }
         }}
       >
         {projects.map((project, idx) => (
