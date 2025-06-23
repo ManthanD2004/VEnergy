@@ -54,15 +54,15 @@ const Blog: React.FC = () => {
       <h2>Our Recent Projects</h2>
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={24}
+        spaceBetween={8}
         slidesPerView={3}
         loop={true}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         centeredSlides={false}
         breakpoints={{
-          320: { slidesPerView: 1, centeredSlides: true },
-          600: { slidesPerView: 2, centeredSlides: false },
-          900: { slidesPerView: 3, centeredSlides: false }
+          320: { slidesPerView: 1, centeredSlides: true, spaceBetween: 4 },
+          600: { slidesPerView: 2, centeredSlides: false, spaceBetween: 8 },
+          900: { slidesPerView: 3, centeredSlides: false, spaceBetween: 24 }
         }}
       >
         {projects.map((project, idx) => (

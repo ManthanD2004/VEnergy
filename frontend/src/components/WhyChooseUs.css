@@ -260,6 +260,10 @@
   .why-choose-us h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    z-index: 2;
+    position: relative;
+    font-weight: bold;
   }
 
   .background-circle {
