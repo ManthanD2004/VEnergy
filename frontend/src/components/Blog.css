@@ -107,7 +107,19 @@
 
 @media (max-width: 768px) {
   .news-section {
-    padding: 2rem 1rem;
+    padding: 2rem 0.2rem;
+  }
+  .swiper {
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-wrapper {
+    justify-content: center;
+  }
+  .news-card {
+    margin: 0 auto;
   }
 
   .news-section h2 {
