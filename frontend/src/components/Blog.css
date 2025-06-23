@@ -107,11 +107,12 @@
 
 @media (max-width: 768px) {
   .news-section {
-    padding: 2rem 0.2rem;
+    padding: 0;
   }
   .swiper {
     width: 100vw !important;
     margin: 0 !important;
+    padding: 0 !important;
     display: flex;
     justify-content: center;
   }
@@ -119,10 +120,11 @@
     justify-content: center;
   }
   .news-card {
-    width: 90vw;
-    max-width: 400px;
+    width: 100vw;
+    max-width: 100vw;
     min-width: 0;
     margin: 0;
+    border-radius: 0;
   }
 
   .news-section h2 {
@@ -163,10 +165,11 @@
   }
 
   .news-card {
-    width: 92vw;
-    max-width: 98vw;
+    width: 100vw;
+    max-width: 100vw;
     min-width: 0;
     margin: 0;
+    border-radius: 0;
   }
 
   .news-card img {

@@ -54,13 +54,13 @@ const Blog: React.FC = () => {
       <h2>Our Recent Projects</h2>
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={8}
+        spaceBetween={24}
         slidesPerView={3}
         loop={true}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         centeredSlides={false}
         breakpoints={{
-          320: { slidesPerView: 1, centeredSlides: true, spaceBetween: 4 },
+          320: { slidesPerView: 1, centeredSlides: true, spaceBetween: 0 },
           600: { slidesPerView: 2, centeredSlides: false, spaceBetween: 8 },
           900: { slidesPerView: 3, centeredSlides: false, spaceBetween: 24 }
         }}
