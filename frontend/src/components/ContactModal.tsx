@@ -60,14 +60,6 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, buttonPosi
     return null;
   }
 
-  // Calculate modal position relative to the button
-  const modalStyle = {
-    position: 'absolute' as 'absolute',
-    top: `${buttonPosition.top}px`,
-    left: `${buttonPosition.left + buttonPosition.width}px`,
-    transform: 'none',
-  };
-
   return (
     <div
       className="contact-modal-overlay"
@@ -75,7 +67,6 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, buttonPosi
     >
       <div
         className="contact-modal-content"
-        style={modalStyle}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="contact-modal-header">

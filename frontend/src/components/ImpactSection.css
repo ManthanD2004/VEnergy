@@ -39,10 +39,11 @@
 }
 
 .impact-icon-placeholder {
+  padding-top: 1rem;
   width: 80px; /* Size of icon area */
   height: 80px; /* Size of icon area */
   background-color: #ffffff; /* Placeholder background for icons */
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   /* Add styles for actual icons when available */
 }
 
