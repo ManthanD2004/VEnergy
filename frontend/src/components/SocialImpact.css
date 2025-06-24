@@ -15,12 +15,10 @@
 
 .impact-cards-grid {
   display: grid;
-  /* Set to 4 columns to ensure all cards are in one line */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem; /* Space between cards */
-  max-width: 1200px; /* Max width of the grid */
-  margin: 0 auto; /* Center the grid */
-  /* Add overflow and padding for horizontal scrolling if needed */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
+  gap: 2rem;
+  max-width: 800px; /* Adjusted for 2 columns */
+  margin: 0 auto;
   overflow-x: auto;
   padding-bottom: 1rem;
 }
@@ -52,7 +50,7 @@
   font-size: 2rem; /* Size for the numbers/values */
   font-weight: bold;
   color: #333; /* Dark grey color */
-  margin-bottom: 0.5rem; /* Space below value */
+  margin-bottom: 0.5rem; /* Reduced space between number and description */
 }
 
 .impact-description {
@@ -66,7 +64,7 @@
   }
 
   .impact-cards-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    grid-template-columns: 1fr; /* 1 column on tablets and below */
     gap: 1.5rem;
   }
 
@@ -117,6 +115,17 @@
   .impact-description {
     font-size: 0.9rem;
   }
+
+  .book-consultation-button {
+    border-radius: 30px;
+    background-color: #ffffff; /* Example: green, change as you like */
+    color: #000000;
+    border: none;
+  }
+  .book-consultation-button:hover {
+    background-color: #388e3c; /* Slightly darker green on hover */
+    color: #fff;
+  }
 }
 
 @media (max-width: 480px) {
@@ -137,6 +146,31 @@
   }
 
   .impact-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .impact-card {
+    
+    padding: 0.8rem;
+    padding-bottom: 2rem; /* Push content up inside the card */
+  }
+  .impact-cards-grid .impact-card .impact-value,
+  .impact-cards-grid .impact-card .impact-description {
+    margin: 0 !important;
+    padding-bottom: 0.80rem !important;
+    line-height: 1.05 !important;
+  }
+  .impact-cards-grid .impact-card .impact-value {
+    padding-top: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .impact-cards-grid .impact-card .impact-description {
     font-size: 0.85rem;
   }
 } 
