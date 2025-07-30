@@ -8,11 +8,11 @@ import { Autoplay } from 'swiper/modules';
 const projects = [
   {
     img: 'https://via.placeholder.com/350x200',
-    title: "Minsun Solar Launched Solar Experience Centre in Bhopal"
+    title: "V.Energy Launched Solar Experience Centre in Bhopal"
   },
   {
     img: 'https://via.placeholder.com/350x200',
-    title: "Minsun Solar's Solar Experience Centre Opened in Indore"
+    title: "V.Energy's Solar Experience Centre Opened in Indore"
   },
   {
     img: 'https://via.placeholder.com/350x200',
@@ -28,11 +28,11 @@ const projects = [
   },
   {
     img: 'https://via.placeholder.com/350x200',
-    title: "Minsun Solar Launched Solar Experience Centre in Pachmarhi"
+    title: "V.Energy Launched Solar Experience Centre in Pachmarhi"
   },
   {
     img: 'https://via.placeholder.com/350x200',
-    title: "Minsun Solar's Solar Experience Centre Opened in Gwalior"
+    title: "V.Energy's Solar Experience Centre Opened in Gwalior"
   },
   {
     img: 'https://via.placeholder.com/350x200',

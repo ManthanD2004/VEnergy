@@ -7,7 +7,7 @@ const AboutContent: React.FC = () => {
   const slides = [
     {
       title:"About Us",
-      content: "We Are India's Leading Solar Energy Company Minsun Solar is one of the renowned rooftop solar companies across India. We install solar panels for houses and businesses. With over 1,000+ delighted clients across India, we have been offering world-class solar solutions to homes and businesses since 2014. We are affiliated with MNRE. We hope to make rooftop solar accessible to everyone."
+      content: "We Are India's Leading Solar Energy Company Vyomesh Energy is one of the renowned rooftop solar companies across India. We install solar panels for houses and businesses. With over 1,000+ delighted clients across India, we have been offering world-class solar solutions to homes and businesses since 2014. We are affiliated with MNRE. We hope to make rooftop solar accessible to everyone."
     },
     {
       title: "Our Mission",

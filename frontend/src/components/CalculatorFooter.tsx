@@ -15,14 +15,14 @@ const CalculatorFooter: React.FC<CalculatorFooterProps> = ({ onOpenModal }) => {
       <div className="footer-container">
         <div className="footer-logo-section">
           {/* Placeholder for logo */}
-          <div className="footer-logo">Minsun Solar</div>
+          <div className="footer-logo">V.Energy</div>
         </div>
         <div className="footer-contact-section">
           <a className="get-a-quote" onClick={onOpenModal}>GET A QUOTE</a>
           <div className="contact-info">
             <p><span>&#9742;</span> 7441100802</p>
             <p><span>&#9993;</span> minsunbpl@gmail.com</p>
-            <p><span>&#9906;</span> Minsun Renewable Solutions LLP<br/> Ishaan park, A3 T3, Manak Vihar, Patel Nagar, Bhopal, Madhya Pradesh 462022</p>
+            <p><span>&#9906;</span> V.Energy<br/> Ishaan park, A3 T3, Manak Vihar, Patel Nagar, Bhopal, Madhya Pradesh 462022</p>
           </div>
           <div className="social-icons">
             {/* Placeholder for social icons */}

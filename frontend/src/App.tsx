@@ -190,7 +190,7 @@ const Home: React.FC = () => {
     <div className="App">
       <div className="content-wrapper">
         <main className="container">
-          <h1>Welcome to V.Energy</h1>
+          <h1>Welcome to Vyomesh Energy</h1>
           <p className="subtitle">Your trusted partner in solar energy solutions.</p>
           {/* Use handler from context */}
           <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>

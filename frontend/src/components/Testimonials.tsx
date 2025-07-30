@@ -17,7 +17,7 @@ const Testimonials: React.FC = () => {
             <span className="location-icon">&#9906;</span> Indore, Madhya Pradesh
           </p>
           <p className="testimonial-text">
-            It's been 1 year since Minsun Solar installed system on my home. We have not faced any issues and are very happy with their service. Highly recommend Minsun Solar.
+            It's been 1 year since V.Energy installed system on my home. We have not faced any issues and are very happy with their service. Highly recommend V.Energy.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
             <span className="location-icon">&#9906;</span> Nagpur, Maharashtra
           </p>
           <p className="testimonial-text">
-            We have installed solar in 4 of our facilities with Minsun Solar and our energy costs has reduced substantially. Our consumers are already appreciating our efforts towards sustainability & net-zero.
+            We have installed solar in 4 of our facilities with V.Energy and our energy costs has reduced substantially. Our consumers are already appreciating our efforts towards sustainability & net-zero.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
             <span className="location-icon">&#9906;</span> Jabalpur, Madhya Pradesh
           </p>
           <p className="testimonial-text">
-            Minsun Solar installed 3kW system on my house in Jabalpur. I used to pay ₹ 2,500-3,000 before solar in electricity bills and last month I paid only ₹ 300! Their after-sales is also very quick & reliable.
+            V.Energy installed 3kW system on my house in Jabalpur. I used to pay ₹ 2,500-3,000 before solar in electricity bills and last month I paid only ₹ 300! Their after-sales is also very quick & reliable.
           </p>
         </div>
       </div>
