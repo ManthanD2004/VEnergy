@@ -190,12 +190,12 @@ const Home: React.FC = () => {
     <div className="App">
       <div className="content-wrapper">
         <main className="container">
-          <h1>Welcome to Minsun Solar</h1>
+          <h1>Welcome to V.Energy</h1>
           <p className="subtitle">Your trusted partner in solar energy solutions.</p>
           {/* Use handler from context */}
           <button className="quote-button" onClick={handleOpenModal}>Get a Quote</button>
           <div className="description">
-            <p>Minsun Solar is a leading rooftop solar company, empowering homes and businesses. MNRE-empanelled and customer-focused, we offer smart solar solutions which are accessible for everyone.</p>
+            <p>V.Energy is a leading rooftop solar company, empowering homes and businesses. MNRE-empanelled and customer-focused, we offer smart solar solutions which are accessible for everyone.</p>
           </div>
         </main>
       </div>
