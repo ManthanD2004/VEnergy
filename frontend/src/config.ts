@@ -1,1 +1,1 @@
-export const API_BASE = "https://venergy.onrender.com/"; 
+export const API_BASE = "https://venergy.onrender.com"; 
